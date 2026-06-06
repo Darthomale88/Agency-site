@@ -15,6 +15,7 @@ html{scroll-behavior:auto;}
 body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
 
+/* Reveal animations */
 .reveal{opacity:0;transform:translateY(38px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .reveal-left{opacity:0;transform:translateX(-38px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
@@ -41,9 +42,11 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw
 .gold-line{display:block;width:0;height:2px;background:var(--gold);margin-bottom:1.5rem;transition:width .9s cubic-bezier(.22,1,.36,1);}
 .gold-line.visible{width:40px;}
 
+/* ---- HERO ---- */
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:6rem;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 75% 45%,#c9a84c0f 0%,transparent 70%);}
 .hero-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;width:100%;}
+.hero-content{}
 .hero-tag{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .2s forwards;}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:700;line-height:1.08;margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .4s forwards;}
 h1 em{font-style:italic;color:var(--gold);}
@@ -53,20 +56,26 @@ h1 em{font-style:italic;color:var(--gold);}
 .badge{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
 .badge::before{content:'✦';color:var(--gold);font-size:.65rem;}
 
-.hero-laptop{opacity:0;animation:laptopIn 1s cubic-bezier(.22,1,.36,1) .5s forwards;position:relative;}
+/* Laptop mockup */
+.hero-laptop{opacity:0;animation:laptopIn 1s cubic-bezier(.22,1,.36,1) .5s forwards;position:relative;background: transparent;}
 @keyframes laptopIn{from{opacity:0;transform:translateX(40px) translateY(10px);}to{opacity:1;transform:translateX(0) translateY(0);}}
-.laptop-wrap{position:relative;width:100%;max-width:520px;margin:0 auto;animation:float 5s ease-in-out 1.5s infinite;}
+.laptop-wrap{display: flex; justify-content: center; position:relative;width:100%;max-width:520px;margin:0 auto;background:inherit;}
+.laptop-wrap img{width: 150%;}
 .laptop-body{width:100%;background:#1c2233;border-radius:12px 12px 0 0;border:2px solid #2a3450;padding:8px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px #ffffff08;}
 .laptop-bar{height:18px;background:#141928;border-radius:8px 8px 0 0;display:flex;align-items:center;padding:0 10px;gap:5px;margin-bottom:6px;}
 .dot{width:7px;height:7px;border-radius:50%;}
 .dot.r{background:#ff5f57;}.dot.y{background:#febc2e;}.dot.g{background:#28c840;}
 .laptop-screen{background:#0d1117;border-radius:4px;overflow:hidden;aspect-ratio:16/10;position:relative;}
+
+/* mini site inside screen */
 .mini-nav{background:#0f172a;padding:6px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff10;}
 .mini-logo{font-family:'Cormorant Garamond',serif;font-size:10px;color:#c9a84c;font-weight:700;}
 .mini-links{display:flex;gap:8px;}
 .mini-links span{font-size:7px;color:#8a97b0;}
 .mini-cta-btn{font-size:6px;background:#c9a84c;color:#0b0f1a;padding:2px 7px;border-radius:2px;font-weight:600;}
+
 .mini-hero{padding:16px 14px 10px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#0b0f1a 60%,#111827);}
+.mini-hero-text{}
 .mini-tag{font-size:6px;color:#c9a84c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
 .mini-h1{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;color:#f0ece3;line-height:1.2;margin-bottom:5px;}
 .mini-h1 em{color:#c9a84c;font-style:italic;}
@@ -74,27 +83,36 @@ h1 em{font-style:italic;color:var(--gold);}
 .mini-btns{display:flex;gap:5px;}
 .mini-btn{font-size:6px;padding:3px 8px;border:1px solid #c9a84c;color:#c9a84c;}
 .mini-btn.f{background:#c9a84c;color:#0b0f1a;}
+
 .mini-screen-visual{width:90px;flex-shrink:0;}
 .mini-card{background:#1a2235;border:1px solid #ffffff14;border-radius:3px;padding:6px;margin-bottom:4px;}
 .mini-card-title{font-size:6px;color:#c9a84c;margin-bottom:3px;font-weight:600;}
 .mini-card-line{height:2px;background:#ffffff10;border-radius:1px;margin-bottom:2px;}
 .mini-card-line.short{width:60%;}
 .mini-card-line.gold{background:#c9a84c40;width:40%;}
+
 .mini-services{padding:10px 14px;background:#111827;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
 .mini-svc{background:#1a2235;padding:5px;border:1px solid #ffffff10;border-radius:2px;text-align:center;}
 .mini-svc-icon{font-size:9px;margin-bottom:2px;}
 .mini-svc-label{font-size:5px;color:#8a97b0;}
+
 .laptop-base{width:calc(100% + 20px);margin-left:-10px;height:14px;background:linear-gradient(180deg,#1c2233,#141928);border-radius:0 0 4px 4px;border:1px solid #2a3450;border-top:none;}
 .laptop-foot{width:80%;margin:0 auto;height:6px;background:#0d1117;border-radius:0 0 8px 8px;}
+
+/* floating glow */
 .laptop-wrap::before{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:60%;height:30px;background:radial-gradient(ellipse,#c9a84c20 0%,transparent 70%);pointer-events:none;}
 
+/* float animation */
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.laptop-wrap{animation:float 5s ease-in-out 1.5s infinite;}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
 .hero-scroll{position:absolute;bottom:2.5rem;left:5%;display:flex;align-items:center;gap:.75rem;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);opacity:0;animation:fadeIn 1s ease 1.3s forwards;}
 .hero-scroll::before{content:'';display:block;width:30px;height:1px;background:var(--muted);}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
+/* Services */
 #services{background:var(--navy2);}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
 .service-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
@@ -104,6 +122,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:.75rem;}
 .service-card p{font-size:.9rem;color:var(--muted);line-height:1.7;}
 
+/* Portfolio */
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
 .port-card{border:1px solid var(--border);overflow:hidden;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .3s;}
 .port-card:hover{transform:translateY(-6px);border-color:var(--gold);}
@@ -119,6 +138,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .port-info p{font-size:.82rem;color:var(--muted);}
 .port-tag{display:inline-block;padding:.2rem .6rem;border:1px solid var(--gold);color:var(--gold);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem;}
 
+/* Pricing */
 #pricing{background:var(--navy2);}
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;align-items:start;}
 .price-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);position:relative;transition:transform .3s cubic-bezier(.22,1,.36,1);}
@@ -133,6 +153,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .price-features li::before{content:'—';color:var(--gold);flex-shrink:0;}
 .price-features li.hl{color:var(--white);}
 
+/* About */
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .about-text p{color:var(--muted);line-height:1.9;margin-bottom:1rem;}
 .about-text p strong{color:var(--white);font-weight:500;}
@@ -150,6 +171,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .about-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:var(--gold);opacity:0;position:relative;z-index:1;transition:opacity .8s ease .5s;}
 .about-visual.visible .about-monogram{opacity:.6;}
 
+/* Testimonials */
 #testimonials{background:var(--navy2);}
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
 .testi-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
@@ -160,6 +182,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .testi-name{font-size:.88rem;font-weight:500;}
 .testi-biz{font-size:.78rem;color:var(--muted);}
 
+/* Contact */
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;}
 .contact-info p{color:var(--muted);line-height:1.9;margin-bottom:2rem;}
 .contact-detail{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;font-size:.9rem;color:var(--muted);}
@@ -170,7 +193,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .form-group input,.form-group textarea,.form-group select{background:var(--navy3);border:1px solid var(--border);color:var(--white);padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .25s;}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold);}
 .form-group textarea{min-height:110px;resize:vertical;}
-.form-group select option{background:#111827;}
+.form-group select option{background:var(--navy2);}
 
 footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--gold);}
@@ -219,16 +242,21 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
         <span class="badge">Honest Pricing</span>
       </div>
     </div>
+
     <div class="hero-laptop">
       <div class="laptop-wrap">
-        <div class="laptop-body">
+	  <img src="Images/laptop.png">
+       <!-- <div class="laptop-body">
           <div class="laptop-bar">
             <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
           </div>
           <div class="laptop-screen">
+            <!-- mini site preview --><!--
             <div class="mini-nav">
               <div class="mini-logo">YourWebBuild</div>
-              <div class="mini-links"><span>Services</span><span>Work</span><span>Pricing</span><span>Contact</span></div>
+              <div class="mini-links">
+                <span>Services</span><span>Work</span><span>Pricing</span><span>Contact</span>
+              </div>
               <div class="mini-cta-btn">Get a Quote</div>
             </div>
             <div class="mini-hero">
@@ -242,8 +270,18 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
                 </div>
               </div>
               <div class="mini-screen-visual">
-                <div class="mini-card"><div class="mini-card-title">GreenCut Lawn Care</div><div class="mini-card-line"></div><div class="mini-card-line short"></div><div class="mini-card-line gold"></div></div>
-                <div class="mini-card"><div class="mini-card-title">Prestige Barbershop</div><div class="mini-card-line"></div><div class="mini-card-line short"></div><div class="mini-card-line gold"></div></div>
+                <div class="mini-card">
+                  <div class="mini-card-title">GreenCut Lawn Care</div>
+                  <div class="mini-card-line"></div>
+                  <div class="mini-card-line short"></div>
+                  <div class="mini-card-line gold"></div>
+                </div>
+                <div class="mini-card">
+                  <div class="mini-card-title">Prestige Barbershop</div>
+                  <div class="mini-card-line"></div>
+                  <div class="mini-card-line short"></div>
+                  <div class="mini-card-line gold"></div>
+                </div>
               </div>
             </div>
             <div class="mini-services">
@@ -252,9 +290,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
               <div class="mini-svc"><div class="mini-svc-icon">🛠</div><div class="mini-svc-label">Care Plans</div></div>
               <div class="mini-svc"><div class="mini-svc-icon">⭐</div><div class="mini-svc-label">Google Biz</div></div>
             </div>
-          </div>
+          </div> -->
         </div>
-        <div class="laptop-base"></div>
+      <!--  <div class="laptop-base"></div>-->
         <div class="laptop-foot"></div>
       </div>
     </div>
@@ -279,7 +317,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   <h2 class="section-title reveal d2">Recent Work</h2>
   <p class="section-sub reveal d3">A look at some of the businesses we've helped get online and look professional.</p>
   <div class="portfolio-grid">
-    <div class="port-card reveal d1"><div class="port-img p1"><div class="port-label"><span>GreenCut</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Lawn Care</p></div></div><div class="port-info"><h4>GreenCut Lawn Care</h4><p>1-page site with contact form, service list, and Google Map</p><span class="port-tag">Starter Site</span></div></div>
+    <a href="https://darthomale88.github.io/Clean-house-site-demo/"><div class="port-card reveal d1"><div class="port-img p1"><div class="port-label"><span>Clean House</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Exterior Cleaning</p></div></div><div class="port-info"><h4>Clean House Power Washing</h4><p>1-page site with contact form, service list, and portfolio</p><span class="port-tag">Starter Site</span></div></div></a>
     <div class="port-card reveal d2"><div class="port-img p2"><div class="port-label"><span>Prestige</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Barbershop</p></div></div><div class="port-info"><h4>Prestige Cuts Barbershop</h4><p>3-page site with gallery, testimonials, and booking CTA</p><span class="port-tag">Business Site</span></div></div>
     <div class="port-card reveal d3"><div class="port-img p3"><div class="port-label"><span>Mara</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Photography</p></div></div><div class="port-info"><h4>Mara Leigh Photography</h4><p>5-page portfolio with full gallery, pricing, and contact</p><span class="port-tag">Premium Site</span></div></div>
   </div>
@@ -296,7 +334,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   </div>
   <div class="reveal d4" style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid var(--border);background:var(--navy3);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
     <div><div style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;">Monthly Care Plans</div><div style="color:var(--muted);font-size:.9rem;">Keep your site running — from $29/mo hosting &amp; backups up to $149/mo with priority edits.</div></div>
-    <a href="care-plans.html" class="btn" target="_blank">Learn More</a>
+    <a href="#contact" class="btn">Learn More</a>
   </div>
 </section>
 
@@ -341,17 +379,76 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <div class="contact-detail reveal d4"><span class="icon">✦</span> Indianapolis, Indiana</div>
       <div class="contact-detail reveal d5"><span class="icon">✦</span> hello@yourwebbuild.com</div>
     </div>
-    <div class="contact-form reveal-right">
-      <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Smith"/></div>
-      <div class="form-group"><label>Business Name</label><input type="text" placeholder="Smith's Lawn Care"/></div>
-      <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@yourbusiness.com"/></div>
-      <div class="form-group"><label>Package Interest</label><select><option value="">Select a package...</option><option>Starter Site ($500–$900)</option><option>Business Site ($1,000–$1,800)</option><option>Premium Site ($2,000–$3,500)</option><option>Not sure — let's talk</option></select></div>
-      <div class="form-group"><label>Tell us about your business</label><textarea placeholder="What do you do, who are your customers, and what do you need from your website?"></textarea></div>
-      <button class="btn btn-fill" style="width:100%;border:none;cursor:pointer;font-size:.9rem;">Send My Request ✦</button>
-    </div>
-  </div>
+  
+	<div class="contact-form reveal-right">
+	  <form action="https://formspree.io/f/mlgvyvbv" method="POST">
+	
+	    <input type="hidden" name="_subject" value="New Website Lead - YourWebBuild">
+	
+	    <!-- Honeypot Spam Protection -->
+	    <input type="text" name="_gotcha" style="display:none">
+	
+	    <div class="form-group">
+	      <label>Your Name</label>
+	      <input
+	        type="text"
+	        name="name"
+	        placeholder="John Smith"
+	        required
+	      />
+	    </div>
+	
+	    <div class="form-group">
+	      <label>Business Name</label>
+	      <input
+	        type="text"
+	        name="business"
+	        placeholder="Smith's Lawn Care"
+	      />
+	    </div>
+	
+	    <div class="form-group">
+	      <label>Email Address</label>
+	      <input
+	        type="email"
+	        name="email"
+	        placeholder="you@yourbusiness.com"
+	        required
+	      />
+	    </div>
+	
+	    <div class="form-group">
+	      <label>Package Interest</label>
+	      <select name="package">
+	        <option value="">Select a package...</option>
+	        <option>Starter Site ($500–$900)</option>
+	        <option>Business Site ($1,000–$1,800)</option>
+	        <option>Premium Site ($2,000–$3,500)</option>
+	        <option>Not sure — let's talk</option>
+	      </select>
+	    </div>
+	
+	    <div class="form-group">
+	      <label>Tell us about your business</label>
+	      <textarea
+	        name="message"
+	        placeholder="What do you do, who are your customers, and what do you need from your website?"
+	        required
+	      ></textarea>
+	    </div>
+	
+	    <button
+	      type="submit"
+	      class="btn btn-fill"
+	      style="width:100%;border:none;cursor:pointer;font-size:.9rem;"
+	    >
+	      Send My Request ✦
+	    </button>
+	
+	  </form>
+	</div>	
+ </div>
 </section>
-
 <footer>
   <div class="footer-logo">YourWebBuild</div>
   <div class="footer-links">
