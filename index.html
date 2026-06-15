@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="YourWebBuild designs professional, mobile-ready websites for small businesses in Indianapolis, IN. Affordable web design starting at $750. Get a free quote today."/>
+<meta name="keywords" content="web design Indianapolis, small business website Indianapolis, affordable web design Indiana, local web designer Indy"/>
+<meta name="author" content="YourWebBuild"/>
+<meta name="robots" content="index, follow"/>
+
+<!-- Open Graph (shows preview when shared on Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="YourWebBuild — Affordable Web Design in Indianapolis"/>
+<meta property="og:description" content="Professional websites for small businesses starting at $750. Mobile-ready, fast delivery, honest pricing."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://yourwebbuild.com"/>
+<meta property="og:image" content="https://yourwebbuild.com/Images/og-preview.jpg"/>
 <title>YourWebBuild</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/x-icon" href="Images/yourwebbuild-logo.svg">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -37,7 +53,7 @@ nav.scrolled{padding:.8rem 5%;}
 .btn-fill{background:var(--gold);color:var(--navy);font-weight:500;}
 .btn-fill:hover{background:var(--gold2);border-color:var(--gold2);}
 section{padding:6rem 5%;}
-h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--white);margin-bottom:.5rem;}
+h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--white);margin-bottom:1.5rem; line-height:2.8rem;}
 .section-sub{font-size:.95rem;color:var(--muted);margin-bottom:3rem;}
 .gold-line{display:block;width:0;height:2px;background:var(--gold);margin-bottom:1.5rem;transition:width .9s cubic-bezier(.22,1,.36,1);}
 .gold-line.visible{width:40px;}
@@ -67,7 +83,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .dot.r{background:#ff5f57;}.dot.y{background:#febc2e;}.dot.g{background:#28c840;}
 .laptop-screen{background:#0d1117;border-radius:4px;overflow:hidden;aspect-ratio:16/10;position:relative;}
 
-/* mini site inside screen */
+/* mini site inside screen 
 .mini-nav{background:#0f172a;padding:6px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff10;}
 .mini-logo{font-family:'Cormorant Garamond',serif;font-size:10px;color:#c9a84c;font-weight:700;}
 .mini-links{display:flex;gap:8px;}
@@ -97,7 +113,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .mini-svc-label{font-size:5px;color:#8a97b0;}
 
 .laptop-base{width:calc(100% + 20px);margin-left:-10px;height:14px;background:linear-gradient(180deg,#1c2233,#141928);border-radius:0 0 4px 4px;border:1px solid #2a3450;border-top:none;}
-.laptop-foot{width:80%;margin:0 auto;height:6px;background:#0d1117;border-radius:0 0 8px 8px;}
+.laptop-foot{width:80%;margin:0 auto;height:6px;background:#0d1117;border-radius:0 0 8px 8px;}*/
 
 /* floating glow */
 .laptop-wrap::before{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:60%;height:30px;background:radial-gradient(ellipse,#c9a84c20 0%,transparent 70%);pointer-events:none;}
@@ -117,10 +133,26 @@ h1 em{font-style:italic;color:var(--gold);}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
 .service-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
 .service-card:hover{border-color:var(--gold);transform:translateY(-4px);}
-.service-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:#ffffff0a;line-height:1;margin-bottom:1rem;transition:color .3s;}
-.service-card:hover .service-num{color:#c9a84c22;}
+.service-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:#ffffff3a;line-height:1;margin-bottom:1rem;transition:color .3s;}
+.service-card:hover .service-num{color:var(--gold);/*#c9a84c99;*/}
 .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:.75rem;}
 .service-card p{font-size:.9rem;color:var(--muted);line-height:1.7;}
+
+/* Process */
+#process { background: var(--navy); }
+.process-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));gap: 1.5rem;}
+.process-step {padding: 2rem;border: 1px solid var(--border);background: var(--navy3);position: relative;transition: border-color .3s, transform .3s cubic-bezier(.22,1,.36,1);}
+.process-step:hover {border-color: var(--gold);transform: translateY(-4px);}
+.process-num {font-family: 'Cormorant Garamond', serif;font-size: 3rem;font-weight: 700;color: #ffffff3a;line-height: 1;margin-bottom: 1rem;transition: color .3s;}
+.process-step:hover .process-num { color: var(--gold); /*#c9a84c22;*/ }
+.process-step h3 {font-family: 'Cormorant Garamond', serif;font-size: 1.4rem;font-weight: 600;margin-bottom: .75rem;}
+.process-step p {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
 
 /* Portfolio */
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
@@ -152,6 +184,28 @@ h1 em{font-style:italic;color:var(--gold);}
 .price-features li{font-size:.88rem;color:var(--muted);padding:.4rem 0;display:flex;gap:.6rem;align-items:flex-start;}
 .price-features li::before{content:'—';color:var(--gold);flex-shrink:0;}
 .price-features li.hl{color:var(--white);}
+
+
+.care-banner {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  background: var(--navy3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.care-left { flex: 1; }
+.care-right { flex-shrink: 0; max-width: 340px; }
+
+@media (max-width: 700px) {
+  .care-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .care-right { max-width: 100%; }
+}
 
 /* About */
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
@@ -208,6 +262,8 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   .about-inner,.contact-inner{grid-template-columns:1fr;}
   .about-visual{height:220px;}
   .nav-links{display:none;}
+  h2.section-title { line-height:1.15; }
+}
 }
 </style>
 </head>
@@ -217,6 +273,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   <div class="nav-logo">YourWebBuild</div>
   <div class="nav-links">
     <a href="#services">Services</a>
+	<a href="#process">Process</a>
     <a href="#portfolio">Work</a>
     <a href="#pricing">Pricing</a>
     <a href="#about">About</a>
@@ -312,6 +369,47 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   </div>
 </section>
 
+
+<section id="process">
+  <div class="gold-line reveal d1"></div>
+  <h2 class="section-title reveal d2">How It Works</h2>
+  <p class="section-sub reveal d3">From first conversation to launch day — here's exactly what to expect when you work with YourWebBuild.</p>
+  <div class="process-grid">
+    <div class="process-step reveal d1">
+      <div class="process-num">01</div>
+      <h3>Consultation - $75</h3>
+      <p>We start with a focused consultation to learn about your business, goals, and vision. The $75 fee is credited towards your proejct deposit
+	  when you move forward - so its costs nothing extra if you're serious.</p>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="process-num">02</div>
+      <h3>Proposal & Agreement</h3>
+      <p>You receive a clear project proposal with pricing and timeline. Once approved, we sign an agreement and collect your deposit to lock in your start date.</p>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="process-num">03</div>
+      <h3>Content Collection</h3>
+      <p>We send you a simple checklist — logo, photos, business info, and copy. Timeline begins once your materials are received.</p>
+    </div>
+    <div class="process-step reveal d4">
+      <div class="process-num">04</div>
+      <h3>Design & Build</h3>
+      <p>We get to work. Your first draft is typically ready within 5–7 business days. You'll get a preview link to review before anything goes live.</p>
+    </div>
+    <div class="process-step reveal d5">
+      <div class="process-num">05</div>
+      <h3>Revisions</h3>
+      <p>You share feedback and we refine until it's right. Included revisions are outlined in your proposal — no surprise charges.</p>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="process-num">06</div>
+      <h3>Launch</h3>
+      <p>Final payment clears, we connect your domain, and your site goes live. We walk you through everything so you feel confident owning it.</p>
+    </div>
+  </div>
+</section>
+
+
 <section id="portfolio">
   <div class="gold-line reveal d1"></div>
   <h2 class="section-title reveal d2">Recent Work</h2>
@@ -331,13 +429,28 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="price-card reveal d1"><div class="price-name">Starter</div><div class="price-amount">$750</div><div class="price-range">Starting at — up to $1000</div><ul class="price-features"><li class="hl">1-page website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Google Map embed</li><li>Basic SEO setup</li><li>1 round of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
     <div class="price-card featured reveal d2"><div class="featured-badge">Most Popular</div><div class="price-name">Business</div><div class="price-amount">$1,500</div><div class="price-range">Starting at — up to $3,000</div><ul class="price-features"><li class="hl">3-page website</li><li>Home, About, Services, Contact</li><li>Gallery &amp; testimonials</li><li>Basic SEO setup</li><li>2 rounds of revisions</li></ul><a href="#contact" class="btn btn-fill" style="width:100%;text-align:center;display:block;">Get Started</a></div>
     <div class="price-card reveal d3"><div class="price-name">Premium</div><div class="price-amount">$3,500</div><div class="price-range">Starting at — up to $5,000</div><ul class="price-features"><li class="hl">5-page website</li><li>Copywriting assistance</li><li>Gallery &amp; testimonials</li><li>Google Business Profile help</li><li>3 rounds of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
+	
+	
+	
   </div>
-  <div class="reveal d4" style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid var(--border);background:var(--navy3);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-<h2 class="section-title reveal d2">We Don't Just Build Sites</h2>
- <p class="section-sub reveal d3">We keep them alive, updated, and growing so you can focus on running your business.</p>	  
-    <div><div style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;">Monthly Care Plans</div><div style="color:var(--muted);font-size:.9rem;">Keep your site running — from $29/mo hosting &amp; backups up to $149/mo with priority edits.</div></div>
+ 
+  
+  <div class="care-banner reveal d3">
+
+  <div class="care-left">
+    <h2 class="section-title reveal d2">We Don't Just Build Sites</h2>
+    <p class= "reveal d3" style="color:var(--muted);font-size:.95rem;margin-bottom:1rem;">We keep them alive, updated, and growing so you can focus on running your business.</p>
+    <div class= "reveal d4"style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;">Monthly Care Plans</div>
+    <div class= "reveal d4" style="color:var(--muted);font-size:.9rem;">Keep your site running — from $29/mo hosting &amp; backups up to $149/mo with priority edits.</div>
+  </div>
+
+  <div class="care-right" style="display:flex;align-items:center;">
     <a href="care-plans.html" class="btn">Learn More</a>
   </div>
+
+ </div>
+  
+  
 </section>
 
 <section id="about">
@@ -448,13 +561,16 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 	    </button>
 	
 	  </form>
+	  
 	</div>	
+	
+	
  </div>
 </section>
 <footer>
   <div class="footer-logo">YourWebBuild</div>
   <div class="footer-links">
-    <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#portfolio">Work</a><a href="#contact">Contact</a>
+    <a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#portfolio">Work</a><a href="#contact">Contact</a>
   </div>
   <div class="footer-copy">© 2026 YourWebBuild. Indianapolis, IN.</div>
 </footer>
@@ -471,7 +587,7 @@ window.addEventListener('scroll', () => {
 
 function smoothScrollTo(target, duration){
   const start = window.scrollY;
-  const end = target.getBoundingClientRect().top + window.scrollY - 80;
+  const end = target.getBoundingClientRect().top + window.scrollY - 75;
   const dist = end - start;
   let startTime = null;
   function ease(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t; }
