@@ -216,13 +216,14 @@ h1 em{font-style:italic;color:var(--gold);}
 .stat:hover{border-color:var(--gold);transform:translateY(-2px);}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;}
 .stat-label{font-size:.8rem;color:var(--muted);margin-top:.25rem;}
-.about-visual{background:var(--navy3);border:1px solid var(--border);height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.about-visual{background:var(--navy3);border:1px solid var(--border);height:680px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .ring{position:absolute;border-radius:50%;border:1px solid #c9a84c18;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);opacity:0;transition:transform 1s cubic-bezier(.22,1,.36,1),opacity 1s ease;}
 .about-visual.visible .ring{opacity:1;}
 .about-visual.visible .ring1{transform:translate(-50%,-50%) scale(1);width:160px;height:160px;transition-delay:.1s;}
 .about-visual.visible .ring2{transform:translate(-50%,-50%) scale(1);width:260px;height:260px;transition-delay:.25s;}
 .about-visual.visible .ring3{transform:translate(-50%,-50%) scale(1);width:360px;height:360px;transition-delay:.4s;}
 .about-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:var(--gold);opacity:0;position:relative;z-index:1;transition:opacity .8s ease .5s;}
+.about-monogram img{width: 100%; height: auto; margin-top: 50px;}	
 .about-visual.visible .about-monogram{opacity:.6;}
 
 /* Testimonials */
@@ -461,7 +462,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <p class="reveal d3">At <strong>YourWebBuild</strong>, we believe every local business deserves a professional online presence — not just the ones who can afford big agencies. We work with handymen, barbers, cleaners, photographers, artists, and churches.</p>
       <p class="reveal d4">Our promise: <strong>clean design, mobile-friendly, fast delivery, honest pricing.</strong> No tech jargon. Just a site that works for you.</p>
       <div class="about-stats">
-        <div class="stat reveal d1"><div class="stat-num">48hr</div><div class="stat-label">Average first draft</div></div>
+        <div class="stat reveal d1"><div class="stat-num">7days</div><div class="stat-label">Average first draft</div></div>
         <div class="stat reveal d2"><div class="stat-num">100%</div><div class="stat-label">Mobile responsive</div></div>
         <div class="stat reveal d3"><div class="stat-num">$0</div><div class="stat-label">Hidden fees</div></div>
         <div class="stat reveal d4"><div class="stat-num">Local</div><div class="stat-label">Indy-based &amp; trusted</div></div>
@@ -469,7 +470,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     </div>
     <div class="about-visual reveal-right">
       <div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div>
-      <div class="about-monogram">YWB</div>
+      <div class="about-monogram"><img src="Images/portrait.png"></div>
     </div>
   </div>
 </section>
@@ -493,6 +494,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <p class="reveal d3">Ready to get your business online? Fill out the form and we'll get back to you within 24 hours. First consultation is $75 — credited toward your project if you move forward.</p>
       <div class="contact-detail reveal d4"><span class="icon">✦</span> Indianapolis, Indiana</div>
       <div class="contact-detail reveal d5"><span class="icon">✦</span> hello@yourwebbuild.com</div>
+	  <div class="contact-detail reveal d5"><span class="icon">✦</span> (317) 731-2108</div>
     </div>
   
 	<div class="contact-form reveal-right">
