@@ -6,20 +6,20 @@
 <meta charset="UTF-8"/>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="YourWebBuild designs professional, mobile-ready websites for small businesses in Indianapolis, IN. Affordable web design starting at $750. Get a free quote today."/>
+<meta name="description" content="YourWebBuild designs professional, mobile-ready websites for small businesses in Indianapolis, IN. Affordable web design starting at $500. Get a free quote today."/>
 <meta name="keywords" content="web design Indianapolis, small business website Indianapolis, affordable web design Indiana, local web designer Indy"/>
 <meta name="author" content="YourWebBuild"/>
 <meta name="robots" content="index, follow"/>
 
 <!-- Open Graph (shows preview when shared on Facebook, LinkedIn, etc.) -->
 <meta property="og:title" content="YourWebBuild — Affordable Web Design in Indianapolis"/>
-<meta property="og:description" content="Professional websites for small businesses starting at $750. Mobile-ready, fast delivery, honest pricing."/>
+<meta property="og:description" content="Professional websites for small businesses starting at $500. Mobile-ready, fast delivery, honest pricing."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://yourwebbuild.com"/>
 <meta property="og:image" content="https://yourwebbuild.com/Images/og-preview.jpg"/>
 <title>YourWebBuild</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/x-icon" href="Images/logo-light.png">
+<link rel="icon" type="image/x-icon" href="Images/yourwebbuild-logo.svg">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -168,6 +168,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .port-info{padding:1.25rem;border-top:1px solid var(--border);}
 .port-info h4{font-size:1rem;font-weight:500;margin-bottom:.25rem;}
 .port-info p{font-size:.82rem;color:var(--muted);}
+.port-outcome{font-size:.8rem;color:var(--gold);margin-top:.45rem;line-height:1.5;}
 .port-tag{display:inline-block;padding:.2rem .6rem;border:1px solid var(--gold);color:var(--gold);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem;}
 
 /* Pricing */
@@ -188,9 +189,10 @@ h1 em{font-style:italic;color:var(--gold);}
 
 .care-banner {
   margin-top: 2rem;
-  padding: 2rem;
-  border: 1px solid var(--border);
-  background: var(--navy3);
+  padding: 2.5rem;
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, var(--navy3), rgba(201,168,76,.06));
+  box-shadow: 0 20px 60px -30px rgba(201,168,76,.45);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,6 +202,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .care-right { flex-shrink: 0; max-width: 340px; }
 
 @media (max-width: 700px) {
+  .about-visual: 500px;
   .care-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -208,6 +211,8 @@ h1 em{font-style:italic;color:var(--gold);}
 }
 
 /* About */
+.about-monogram img{height: auto; width: 100%; margin-top: 50px; padding: 0;}
+.about-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:var(--gold);opacity:0;position:relative;z-index:1;transition:opacity .8s ease .5s; }
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .about-text p{color:var(--muted);line-height:1.9;margin-bottom:1rem;}
 .about-text p strong{color:var(--white);font-weight:500;}
@@ -216,14 +221,13 @@ h1 em{font-style:italic;color:var(--gold);}
 .stat:hover{border-color:var(--gold);transform:translateY(-2px);}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;}
 .stat-label{font-size:.8rem;color:var(--muted);margin-top:.25rem;}
-.about-visual{background:var(--navy3);border:1px solid var(--border);height:680px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.about-visual{background:var(--navy3);border:1px solid var(--border);height:470px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .ring{position:absolute;border-radius:50%;border:1px solid #c9a84c18;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);opacity:0;transition:transform 1s cubic-bezier(.22,1,.36,1),opacity 1s ease;}
 .about-visual.visible .ring{opacity:1;}
 .about-visual.visible .ring1{transform:translate(-50%,-50%) scale(1);width:160px;height:160px;transition-delay:.1s;}
 .about-visual.visible .ring2{transform:translate(-50%,-50%) scale(1);width:260px;height:260px;transition-delay:.25s;}
 .about-visual.visible .ring3{transform:translate(-50%,-50%) scale(1);width:360px;height:360px;transition-delay:.4s;}
-.about-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:var(--gold);opacity:0;position:relative;z-index:1;transition:opacity .8s ease .5s;}
-.about-monogram img{width: 100%; height: auto; margin-top: 150px;}	
+
 .about-visual.visible .about-monogram{opacity:.6;}
 
 /* Testimonials */
@@ -236,6 +240,10 @@ h1 em{font-style:italic;color:var(--gold);}
 .testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:var(--navy);flex-shrink:0;}
 .testi-name{font-size:.88rem;font-weight:500;}
 .testi-biz{font-size:.78rem;color:var(--muted);}
+.review-cta{margin-top:2.5rem;padding:2.5rem;border:1px solid var(--gold);background:linear-gradient(135deg,var(--navy3),rgba(201,168,76,.06));box-shadow:0 20px 60px -30px rgba(201,168,76,.45);text-align:center;}
+.review-stars{color:var(--gold);font-size:1.4rem;letter-spacing:.25em;margin-bottom:.75rem;}
+.review-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;margin-bottom:.5rem;}
+.review-cta p{font-size:.92rem;color:var(--muted);max-width:480px;margin:0 auto 1.5rem;line-height:1.7;}
 
 /* Contact */
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;}
@@ -258,10 +266,11 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 .footer-links a:hover{color:var(--gold);}
 
 @media(max-width:900px){
+  .about-monogram img {margin-top: 200px;}
   .hero-inner{grid-template-columns:1fr;}
   .hero-laptop{display:none;}
   .about-inner,.contact-inner{grid-template-columns:1fr;}
-  .about-visual{height:220px;}
+  .about-visual{height:420px;}
   .nav-links{display:none;}
   h2.section-title { line-height:1.15; }
 }
@@ -289,7 +298,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="hero-content">
       <div class="hero-tag">Web Design · Indianapolis, IN</div>
       <h1>Your business deserves a <em>website that works.</em></h1>
-      <p class="hero-sub">Professional, mobile-ready websites for small businesses — without the agency price tag. Clean design. Fast delivery. Real results.</p>
+      <p class="hero-sub">Professional, mobile-ready websites for small businesses — without the agency price tag. Built in Indianapolis for the barbers, cleaners, contractors, and churches who keep this city running.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-fill">Get a Free Quote</a>
         <a href="#portfolio" class="btn">See Our Work</a>
@@ -380,7 +389,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <div class="process-num">01</div>
       <h3>Consultation - $75</h3>
       <p>We start with a focused consultation to learn about your business, goals, and vision. The $75 fee is credited towards your project deposit
-	  when you move forward.</p>
+	  when you move forward - so it costs nothing extra if you're serious.</p>
     </div>
     <div class="process-step reveal d2">
       <div class="process-num">02</div>
@@ -416,20 +425,21 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   <h2 class="section-title reveal d2">Recent Work</h2>
   <p class="section-sub reveal d3">A look at some of the businesses we've helped get online and look professional.</p>
   <div class="portfolio-grid">
-    <a href="https://darthomale88.github.io/Clean-house-site-demo/"><div class="port-card reveal d1"><div class="port-img p1"><div class="port-label"><span>Clean House</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Exterior Cleaning</p></div></div><div class="port-info"><h4>Clean House Power Washing</h4><p>1-page site with contact form, service list, and portfolio</p><span class="port-tag">Starter Site</span></div></div></a>
-   <!-- <div class="port-card reveal d2"><div class="port-img p2"><div class="port-label"><span>Prestige</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Barbershop</p></div></div><div class="port-info"><h4>Prestige Cuts Barbershop</h4><p>3-page site with gallery, testimonials, and booking CTA</p><span class="port-tag">Business Site</span></div></div>-->
-    <a href="https://darthomale88.github.io/Photography-site/"><div class="port-card reveal d3"><div class="port-img p3"><div class="port-label"><span>Mara</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Photography</p></div></div><div class="port-info"><h4>Mara Leigh Photography</h4><p>5-page portfolio with full gallery, pricing, and contact</p><span class="port-tag">Premium Site</span></div></div></a>
+    <a href="https://darthomale88.github.io/Clean-house-site-demo/"><div class="port-card reveal d1"><div class="port-img p1"><div class="port-label"><span>Clean House</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Exterior Cleaning</p></div></div><div class="port-info"><h4>Clean House Power Washing</h4><p>1-page site with contact form, service list, and portfolio</p><p class="port-outcome">Built to turn local searches into booked jobs.</p><span class="port-tag">Starter Site</span></div></div></a>
+    <div class="port-card reveal d2"><div class="port-img p2"><div class="port-label"><span>Prestige</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Barbershop</p></div></div><div class="port-info"><h4>Prestige Cuts Barbershop</h4><p>3-page site with gallery, testimonials, and booking CTA</p><p class="port-outcome">Designed to keep the chairs full with easy online booking.</p><span class="port-tag">Business Site</span></div></div>
+    <div class="port-card reveal d3"><div class="port-img p3"><div class="port-label"><span>Mara</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Photography</p></div></div><div class="port-info"><h4>Mara Leigh Photography</h4><p>5-page portfolio with full gallery, pricing, and contact</p><p class="port-outcome">Made to showcase her work and book more sessions.</p><span class="port-tag">Premium Site</span></div></div>
   </div>
 </section>
 
 <section id="pricing">
   <div class="gold-line reveal d1"></div>
   <h2 class="section-title reveal d2">Simple, Honest Pricing</h2>
+  <p class="reveal d3" style="color:var(--gold);font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem;">✦ Year-End Sale · New-Client Pricing Through Dec 31</p>
   <p class="section-sub reveal d3">No surprises. Pick the package that fits — or reach out and we'll find the right fit together.</p>
   <div class="pricing-grid">
-    <div class="price-card reveal d1"><div class="price-name">Starter</div><div class="price-amount">$750</div><div class="price-range">Starting at — up to $1000</div><ul class="price-features"><li class="hl">1-page website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Google Map embed</li><li>Basic SEO setup</li><li>1 round of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
-    <div class="price-card featured reveal d2"><div class="featured-badge">Most Popular</div><div class="price-name">Business</div><div class="price-amount">$1,500</div><div class="price-range">Starting at — up to $3,000</div><ul class="price-features"><li class="hl">3-page website</li><li>Home, About, Services, Contact</li><li>Gallery &amp; testimonials</li><li>Basic SEO setup</li><li>2 rounds of revisions</li></ul><a href="#contact" class="btn btn-fill" style="width:100%;text-align:center;display:block;">Get Started</a></div>
-    <div class="price-card reveal d3"><div class="price-name">Premium</div><div class="price-amount">$3,500</div><div class="price-range">Starting at — up to $5,000</div><ul class="price-features"><li class="hl">5-page website</li><li>Copywriting assistance</li><li>Gallery &amp; testimonials</li><li>Google Business Profile help</li><li>3 rounds of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
+    <div class="price-card reveal d1"><div class="price-name">Starter</div><div class="price-amount">$500</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$750</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">1-page website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Google Map embed</li><li>Basic SEO setup</li><li>1 round of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
+    <div class="price-card featured reveal d2"><div class="featured-badge">Most Popular</div><div class="price-name">Business</div><div class="price-amount">$800</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$1,500</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">3-page website</li><li>Home, About, Services, Contact</li><li>Gallery &amp; testimonials</li><li>Basic SEO setup</li><li>2 rounds of revisions</li></ul><a href="#contact" class="btn btn-fill" style="width:100%;text-align:center;display:block;">Get Started</a></div>
+    <div class="price-card reveal d3"><div class="price-name">Premium</div><div class="price-amount">$1,000</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$3,500</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">5-page website</li><li>Copywriting assistance</li><li>Gallery &amp; testimonials</li><li>Google Business Profile help</li><li>3 rounds of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
 	
 	
 	
@@ -443,6 +453,8 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <p class= "reveal d3" style="color:var(--muted);font-size:.95rem;margin-bottom:1rem;">We keep them alive, updated, and growing so you can focus on running your business.</p>
     <div class= "reveal d4"style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;">Monthly Care Plans</div>
     <div class= "reveal d4" style="color:var(--muted);font-size:.9rem;">Keep your site running — from $29/mo hosting &amp; backups up to $149/mo with priority edits.</div>
+    <div class= "reveal d4" style="color:var(--white);font-size:.9rem;margin-top:.75rem;">Most clients recoup the cost in one prevented website outage.</div>
+    <div class= "reveal d5" style="color:var(--gold);font-size:.85rem;margin-top:.5rem;">No long-term contracts. No disappearing after launch.</div>
   </div>
 
   <div class="care-right" style="display:flex;align-items:center;">
@@ -462,7 +474,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <p class="reveal d3">At <strong>YourWebBuild</strong>, we believe every local business deserves a professional online presence — not just the ones who can afford big agencies. We work with handymen, barbers, cleaners, photographers, artists, and churches.</p>
       <p class="reveal d4">Our promise: <strong>clean design, mobile-friendly, fast delivery, honest pricing.</strong> No tech jargon. Just a site that works for you.</p>
       <div class="about-stats">
-        <div class="stat reveal d1"><div class="stat-num">7days</div><div class="stat-label">Average first draft</div></div>
+        <div class="stat reveal d1"><div class="stat-num">7 days</div><div class="stat-label">Average first draft</div></div>
         <div class="stat reveal d2"><div class="stat-num">100%</div><div class="stat-label">Mobile responsive</div></div>
         <div class="stat reveal d3"><div class="stat-num">$0</div><div class="stat-label">Hidden fees</div></div>
         <div class="stat reveal d4"><div class="stat-num">Local</div><div class="stat-label">Indy-based &amp; trusted</div></div>
@@ -475,7 +487,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   </div>
 </section>
 
-<!--<section id="testimonials">
+<section id="testimonials">
   <div class="gold-line reveal d1"></div>
   <h2 class="section-title reveal d2">What Clients Say</h2>
   <p class="section-sub reveal d3">Real feedback from real small business owners.</p>
@@ -484,7 +496,17 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="testi-card reveal d2"><p class="testi-quote">"Fast, professional, and they actually listened. My clients love the new site and bookings have gone up."</p><div class="testi-author"><div class="testi-avatar">TJ</div><div><div class="testi-name">Tanya J.</div><div class="testi-biz">Prestige Cuts Barbershop</div></div></div></div>
     <div class="testi-card reveal d3"><p class="testi-quote">"They handle all the updates. It's one less thing to worry about — and the site looks incredible."</p><div class="testi-author"><div class="testi-avatar">DK</div><div><div class="testi-name">David K.</div><div class="testi-biz">Handyman Services</div></div></div></div>
   </div>
-</section>-->
+
+  <div class="review-cta reveal d1">
+    <div class="review-stars" aria-hidden="true">★★★★★</div>
+    <h3>Worked with us? We'd love your review.</h3>
+    <p>A quick Google review helps other Indianapolis business owners find us — and it means the world to a growing local business. Thank you!</p>
+    <!-- ▼ REPLACE the link below with your Google review link.
+         Get it from your Google Business Profile → "Ask for reviews" → copy link.
+         It will look like: https://g.page/r/XXXXXXXXXXXX/review -->
+    <a href="https://g.page/r/YOUR-REVIEW-LINK/review" class="btn btn-fill" target="_blank" rel="noopener">Leave a Google Review</a>
+  </div>
+</section>
 
 <section id="contact">
   <div class="contact-inner">
@@ -538,9 +560,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 	      <label>Package Interest</label>
 	      <select name="package">
 	        <option value="">Select a package...</option>
-	        <option>Starter Site ($500–$900)</option>
-	        <option>Business Site ($1,000–$1,800)</option>
-	        <option>Premium Site ($2,000–$3,500)</option>
+	        <option>Starter Site ($500)</option>
+	        <option>Business Site ($800)</option>
+	        <option>Premium Site ($1,000)</option>
 	        <option>Not sure — let's talk</option>
 	      </select>
 	    </div>
