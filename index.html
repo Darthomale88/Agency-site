@@ -3,66 +3,32 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta charset="UTF-8"/>
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="YourWebBuild designs professional, mobile-ready websites for small businesses in Indianapolis, IN. Affordable web design starting at $500. Get a free quote today."/>
-<meta name="keywords" content="web design Indianapolis, small business website Indianapolis, affordable web design Indiana, local web designer Indy, black owned business, black own web designer"/>
+<meta name="keywords" content="web design Indianapolis, small business website Indianapolis, affordable web design Indiana, local web designer Indy"/>
 <meta name="author" content="YourWebBuild"/>
 <meta name="robots" content="index, follow"/>
 
-<!-- Open Graph (shows preview when shared on Facebook, LinkedIn, etc.) -->
 <meta property="og:title" content="YourWebBuild — Affordable Web Design in Indianapolis"/>
 <meta property="og:description" content="Professional websites for small businesses starting at $500. Mobile-ready, fast delivery, honest pricing."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://yourwebbuild.com"/>
 <meta property="og:image" content="https://yourwebbuild.com/Images/og-preview.jpg"/>
-<title>YourWebBuild</title>
+
+<title>YourWebBuild | Web Design for Indianapolis Small Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/x-icon" href="Images/yourwebbuild-logo.svg">
+<link rel="icon" type="image/x-icon" href="Images/ywb-blue-tab.png">
+<link rel="stylesheet" href="style.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --navy:#0b0f1a;--navy2:#111827;--navy3:#1a2235;
-  --gold:#c9a84c;--gold2:#e8c96a;--white:#f0ece3;--muted:#8a97b0;--border:#ffffff14;
-}
-html{scroll-behavior:auto;}
-body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
-a{color:inherit;text-decoration:none;}
-
-/* Reveal animations */
-.reveal{opacity:0;transform:translateY(38px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-left{opacity:0;transform:translateX(-38px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
-.reveal-left.visible{opacity:1;transform:translateX(0);}
-.reveal-right{opacity:0;transform:translateX(38px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
-.reveal-right.visible{opacity:1;transform:translateX(0);}
-.d1{transition-delay:.00s;}.d2{transition-delay:.12s;}.d3{transition-delay:.24s;}.d4{transition-delay:.36s;}.d5{transition-delay:.48s;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(11,15,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:padding .3s;}
-nav.scrolled{padding:.8rem 5%;}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--gold);}
-.nav-links{display:flex;gap:2rem;}
-.nav-links a{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s cubic-bezier(.22,1,.36,1);}
-.nav-links a:hover{color:var(--gold);}
-.nav-links a:hover::after{width:100%;}
-.btn{display:inline-block;padding:.75rem 1.8rem;border:1px solid var(--gold);color:var(--gold);font-family:'DM Sans',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;background:transparent;}
-.btn:hover{background:var(--gold);color:var(--navy);}
-.btn-fill{background:var(--gold);color:var(--navy);font-weight:500;}
-.btn-fill:hover{background:var(--gold2);border-color:var(--gold2);}
-section{padding:6rem 5%;}
-h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--white);margin-bottom:1.5rem; line-height:2.8rem;}
-.section-sub{font-size:.95rem;color:var(--muted);margin-bottom:3rem;}
-.gold-line{display:block;width:0;height:2px;background:var(--gold);margin-bottom:1.5rem;transition:width .9s cubic-bezier(.22,1,.36,1);}
-.gold-line.visible{width:40px;}
-
-/* ---- HERO ---- */
+/* ---- HERO --*/
+/*.overlay{ position: absolute; inset:0; height: 100%, width: 100%; background: rgba(0,0,0,1);}*/
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:6rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 75% 45%,#c9a84c0f 0%,transparent 70%);}
+.hero-bg{position:absolute;inset:0; background: radial-gradient(ellipse 55% 65% at 75% 45%,#c9a84c0f 0%,transparent 70%);}
 .hero-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;width:100%;}
-.hero-content{}
 .hero-tag{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .2s forwards;}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:700;line-height:1.08;margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .4s forwards;}
 h1 em{font-style:italic;color:var(--gold);}
@@ -72,61 +38,25 @@ h1 em{font-style:italic;color:var(--gold);}
 .badge{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
 .badge::before{content:'✦';color:var(--gold);font-size:.65rem;}
 
-/* Laptop mockup */
-.hero-laptop{opacity:0;animation:laptopIn 1s cubic-bezier(.22,1,.36,1) .5s forwards;position:relative;background: transparent;}
+.hero-laptop{opacity:0;animation:laptopIn 1s cubic-bezier(.22,1,.36,1) .5s forwards;position:relative;background:transparent;}
 @keyframes laptopIn{from{opacity:0;transform:translateX(40px) translateY(10px);}to{opacity:1;transform:translateX(0) translateY(0);}}
-.laptop-wrap{display: flex; justify-content: center; position:relative;width:100%;max-width:520px;margin:0 auto;background:inherit;}
-.laptop-wrap img{width: 150%;}
-.laptop-body{width:100%;background:#1c2233;border-radius:12px 12px 0 0;border:2px solid #2a3450;padding:8px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px #ffffff08;}
-.laptop-bar{height:18px;background:#141928;border-radius:8px 8px 0 0;display:flex;align-items:center;padding:0 10px;gap:5px;margin-bottom:6px;}
-.dot{width:7px;height:7px;border-radius:50%;}
-.dot.r{background:#ff5f57;}.dot.y{background:#febc2e;}.dot.g{background:#28c840;}
-.laptop-screen{background:#0d1117;border-radius:4px;overflow:hidden;aspect-ratio:16/10;position:relative;}
-
-/* mini site inside screen 
-.mini-nav{background:#0f172a;padding:6px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff10;}
-.mini-logo{font-family:'Cormorant Garamond',serif;font-size:10px;color:#c9a84c;font-weight:700;}
-.mini-links{display:flex;gap:8px;}
-.mini-links span{font-size:7px;color:#8a97b0;}
-.mini-cta-btn{font-size:6px;background:#c9a84c;color:#0b0f1a;padding:2px 7px;border-radius:2px;font-weight:600;}
-
-.mini-hero{padding:16px 14px 10px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#0b0f1a 60%,#111827);}
-.mini-hero-text{}
-.mini-tag{font-size:6px;color:#c9a84c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
-.mini-h1{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;color:#f0ece3;line-height:1.2;margin-bottom:5px;}
-.mini-h1 em{color:#c9a84c;font-style:italic;}
-.mini-sub{font-size:6.5px;color:#8a97b0;line-height:1.6;max-width:130px;margin-bottom:8px;}
-.mini-btns{display:flex;gap:5px;}
-.mini-btn{font-size:6px;padding:3px 8px;border:1px solid #c9a84c;color:#c9a84c;}
-.mini-btn.f{background:#c9a84c;color:#0b0f1a;}
-
-.mini-screen-visual{width:90px;flex-shrink:0;}
-.mini-card{background:#1a2235;border:1px solid #ffffff14;border-radius:3px;padding:6px;margin-bottom:4px;}
-.mini-card-title{font-size:6px;color:#c9a84c;margin-bottom:3px;font-weight:600;}
-.mini-card-line{height:2px;background:#ffffff10;border-radius:1px;margin-bottom:2px;}
-.mini-card-line.short{width:60%;}
-.mini-card-line.gold{background:#c9a84c40;width:40%;}
-
-.mini-services{padding:10px 14px;background:#111827;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
-.mini-svc{background:#1a2235;padding:5px;border:1px solid #ffffff10;border-radius:2px;text-align:center;}
-.mini-svc-icon{font-size:9px;margin-bottom:2px;}
-.mini-svc-label{font-size:5px;color:#8a97b0;}
-
-.laptop-base{width:calc(100% + 20px);margin-left:-10px;height:14px;background:linear-gradient(180deg,#1c2233,#141928);border-radius:0 0 4px 4px;border:1px solid #2a3450;border-top:none;}
-.laptop-foot{width:80%;margin:0 auto;height:6px;background:#0d1117;border-radius:0 0 8px 8px;}*/
-
-/* floating glow */
+.laptop-wrap{display:flex;justify-content:center;position:relative;width:100%;max-width:520px;margin:0 auto;background:inherit;animation:float 5s ease-in-out 1.5s infinite;}
+.laptop-wrap img{width:150%;}
 .laptop-wrap::before{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:60%;height:30px;background:radial-gradient(ellipse,#c9a84c20 0%,transparent 70%);pointer-events:none;}
-
-/* float animation */
+.laptop-foot{width:80%;margin:0 auto;height:6px;background:#0d1117;border-radius:0 0 8px 8px;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-.laptop-wrap{animation:float 5s ease-in-out 1.5s infinite;}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 
 .hero-scroll{position:absolute;bottom:2.5rem;left:5%;display:flex;align-items:center;gap:.75rem;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);opacity:0;animation:fadeIn 1s ease 1.3s forwards;}
 .hero-scroll::before{content:'';display:block;width:30px;height:1px;background:var(--muted);}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* ---- HERO video background --*/
+#myVideo {  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 /* Services */
 #services{background:var(--navy2);}
@@ -134,104 +64,19 @@ h1 em{font-style:italic;color:var(--gold);}
 .service-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
 .service-card:hover{border-color:var(--gold);transform:translateY(-4px);}
 .service-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:#ffffff3a;line-height:1;margin-bottom:1rem;transition:color .3s;}
-.service-card:hover .service-num{color:var(--gold);/*#c9a84c99;*/}
+.service-card:hover .service-num{color:var(--gold);}
 .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:.75rem;}
 .service-card p{font-size:.9rem;color:var(--muted);line-height:1.7;}
 
-/* Process */
-#process { background: var(--navy); }
-.process-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));gap: 1.5rem;}
-.process-step {padding: 2rem;border: 1px solid var(--border);background: var(--navy3);position: relative;transition: border-color .3s, transform .3s cubic-bezier(.22,1,.36,1);}
-.process-step:hover {border-color: var(--gold);transform: translateY(-4px);}
-.process-num {font-family: 'Cormorant Garamond', serif;font-size: 3rem;font-weight: 700;color: #ffffff3a;line-height: 1;margin-bottom: 1rem;transition: color .3s;}
-.process-step:hover .process-num { color: var(--gold); /*#c9a84c22;*/ }
-.process-step h3 {font-family: 'Cormorant Garamond', serif;font-size: 1.4rem;font-weight: 600;margin-bottom: .75rem;}
-.process-step p {
-  font-size: .9rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-
-
-/* Portfolio */
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-.port-card{border:1px solid var(--border);overflow:hidden;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .3s;}
-.port-card:hover{transform:translateY(-6px);border-color:var(--gold);}
-.port-img{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-.port-img.p1{background:linear-gradient(135deg,#1a2a1a,#243524);}
-.port-img.p2{background:linear-gradient(135deg,#1a1a2a,#232340);}
-.port-img.p3{background:linear-gradient(135deg,#2a1a1a,#402323);}
-.port-label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .4s cubic-bezier(.22,1,.36,1);}
-.port-card:hover .port-label{transform:translateY(-4px);}
-.port-label span{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--white);}
-.port-info{padding:1.25rem;border-top:1px solid var(--border);}
-.port-info h4{font-size:1rem;font-weight:500;margin-bottom:.25rem;}
-.port-info p{font-size:.82rem;color:var(--muted);}
-.port-outcome{font-size:.8rem;color:var(--gold);margin-top:.45rem;line-height:1.5;}
-.port-tag{display:inline-block;padding:.2rem .6rem;border:1px solid var(--gold);color:var(--gold);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem;}
-
-/* Pricing */
-#pricing{background:var(--navy2);}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;align-items:start;}
-.price-card{padding:2rem;border:1px solid var(--border);background:var(--navy3);position:relative;transition:transform .3s cubic-bezier(.22,1,.36,1);}
-.price-card:hover{transform:translateY(-4px);}
-.price-card.featured{border-color:var(--gold);}
-.featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem 1rem;white-space:nowrap;font-weight:500;}
-.price-name{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
-.price-amount{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;line-height:1;margin-bottom:.25rem;}
-.price-range{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
-.price-features{list-style:none;margin-bottom:2rem;}
-.price-features li{font-size:.88rem;color:var(--muted);padding:.4rem 0;display:flex;gap:.6rem;align-items:flex-start;}
-.price-features li::before{content:'—';color:var(--gold);flex-shrink:0;}
-.price-features li.hl{color:var(--white);}
-
-
-.care-banner {
-  margin-top: 2rem;
-  padding: 2.5rem;
-  border: 1px solid var(--gold);
-  background: linear-gradient(135deg, var(--navy3), rgba(201,168,76,.06));
-  box-shadow: 0 20px 60px -30px rgba(201,168,76,.45);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.care-left { flex: 1; }
-.care-right { flex-shrink: 0; max-width: 340px; }
-
-
-
-/* About */
-.about-monogram img{/* height: auto;*/ width: 100%; padding: 0;}
-.about-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem; height: 100%; font-weight:700;color:var(--gold);opacity:0;position:relative;z-index:1;transition:opacity .8s ease .5s;}
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.about-text p{color:var(--muted);line-height:1.9;margin-bottom:1rem;}
-.about-text p strong{color:var(--white);font-weight:500;}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;}
-.stat{padding:1.5rem;border:1px solid var(--border);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
-.stat:hover{border-color:var(--gold);transform:translateY(-2px);}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;}
-.stat-label{font-size:.8rem;color:var(--muted);margin-top:.25rem;}
-.about-visual{background: var(--navy3);border:1px solid var(--border);height:600px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-.ring{position:absolute;border-radius:50%;border:1px solid #c9a84c18;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);opacity:0;transition:transform 1s cubic-bezier(.22,1,.36,1),opacity 1s ease;}
-.about-visual.visible .ring{opacity:1;}
-.about-visual.visible .ring1{transform:translate(-50%,-50%) scale(1);width:160px;height:160px;transition-delay:.1s;}
-.about-visual.visible .ring2{transform:translate(-50%,-50%) scale(1);width:260px;height:260px;transition-delay:.25s;}
-.about-visual.visible .ring3{transform:translate(-50%,-50%) scale(1);width:360px;height:360px;transition-delay:.4s;}
-
-.about-visual.visible .about-monogram{opacity:.6;}
-
-
-@media (max-width: 700px) {
-   .about-visual{background: red; padding: 0; height: 20px;}
-  .care-banner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .care-right { max-width: 100%; }
-}
+/* Explore — short links out to the dedicated pages */
+#explore{background:var(--navy);}
+.explore-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
+.explore-card{display:block;padding:2rem;border:1px solid var(--border);background:var(--navy3);transition:border-color .3s,transform .3s cubic-bezier(.22,1,.36,1);}
+.explore-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.explore-mark{color:var(--gold);font-size:1.1rem;margin-bottom:1rem;display:block;}
+.explore-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:.75rem;}
+.explore-card p{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.explore-link{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
 
 /* Testimonials */
 #testimonials{background:var(--navy2);}
@@ -243,76 +88,47 @@ h1 em{font-style:italic;color:var(--gold);}
 .testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:var(--navy);flex-shrink:0;}
 .testi-name{font-size:.88rem;font-weight:500;}
 .testi-biz{font-size:.78rem;color:var(--muted);}
-.review-cta{margin-top:2.5rem;padding:2.5rem;border:1px solid var(--gold);background:linear-gradient(135deg,var(--navy3),rgba(201,168,76,.06));box-shadow:0 20px 60px -30px rgba(201,168,76,.45);text-align:center;}
-.review-stars{color:var(--gold);font-size:1.4rem;letter-spacing:.25em;margin-bottom:.75rem;}
-.review-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;margin-bottom:.5rem;}
-.review-cta p{font-size:.92rem;color:var(--muted);max-width:480px;margin:0 auto 1.5rem;line-height:1.7;}
-
-/* Contact */
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;}
-.contact-info p{color:var(--muted);line-height:1.9;margin-bottom:2rem;}
-.contact-detail{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;font-size:.9rem;color:var(--muted);}
-.contact-detail .icon{color:var(--gold);}
-.contact-form{display:flex;flex-direction:column;gap:1rem;}
-.form-group{display:flex;flex-direction:column;gap:.4rem;}
-.form-group label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-.form-group input,.form-group textarea,.form-group select{background:var(--navy3);border:1px solid var(--border);color:var(--white);padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .25s;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold);}
-.form-group textarea{min-height:110px;resize:vertical;}
-.form-group select option{background:var(--navy2);}
-
-footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--gold);}
-.footer-copy{font-size:.8rem;color:var(--muted);}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-.footer-links a{font-size:.8rem;color:var(--muted);}
-.footer-links a:hover{color:var(--gold);}
 
 @media(max-width:900px){
-  
   .hero-inner{grid-template-columns:1fr;}
   .hero-laptop{display:none;}
-  .about-inner,.contact-inner{grid-template-columns:1fr;}
-  .about-visual{height:520px;}
-  .nav-links{display:none;}
-  h2.section-title { line-height:1.15; }
 }
-}
-
-@media (max-width: 1200px){
-	about-visual: background: red;
-
-}
-
-
-
 </style>
 </head>
 <body>
 
 <nav id="main-nav">
-  <div class="nav-logo">YourWebBuild</div>
-  <div class="nav-links">
-    <a href="#services">Services</a>
-	<a href="#process">Process</a>
-    <a href="#portfolio">Work</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <a href="index.html" class="nav-logo">YourWebBuild</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#services" class="active">Services</a>
+    <a href="process.html">Process</a>
+    <a href="portfolio.html">Work</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
-  <a href="#contact" class="btn btn-fill">Get a Quote</a>
+  <div class="nav-right">
+    <a href="contact.html" class="btn btn-fill">Get a Quote</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <section id="hero">
+<!--<video autoplay muted loop id="myVideo"> <source src="Images/hero-video.mp4" type="video/mp4"> </video>-->
+  
+
+  <div class="overlay"></div>
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">Web Design · Indianapolis, IN</div>
       <h1>Your business deserves a <em>website that works.</em></h1>
-      <p class="hero-sub">Professional, mobile-ready websites for small businesses — without the agency price tag. Built in Indianapolis for the barbers, cleaners, contractors, and churches who keep this city running.</p>
+      <p class="hero-sub">Professional, mobile-ready websites for small businesses without the agency price tag. Built in Indianapolis for the barbers, cleaners, contractors, and churches who keep this city running.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-fill">Get a Free Quote</a>
-        <a href="#portfolio" class="btn">See Our Work</a>
+        <a href="contact.html" class="btn btn-fill">Get a Free Quote</a>
+        <a href="portfolio.html" class="btn">See Our Work</a>
       </div>
       <div class="hero-badges">
         <span class="badge">Mobile Friendly</span>
@@ -323,54 +139,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
     <div class="hero-laptop">
       <div class="laptop-wrap">
-	  <img src="Images/laptop.png">
-       <!-- <div class="laptop-body">
-          <div class="laptop-bar">
-            <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-          </div>
-          <div class="laptop-screen">
-            <!-- mini site preview --><!--
-            <div class="mini-nav">
-              <div class="mini-logo">YourWebBuild</div>
-              <div class="mini-links">
-                <span>Services</span><span>Work</span><span>Pricing</span><span>Contact</span>
-              </div>
-              <div class="mini-cta-btn">Get a Quote</div>
-            </div>
-            <div class="mini-hero">
-              <div class="mini-hero-text">
-                <div class="mini-tag">Web Design · Indy</div>
-                <div class="mini-h1">Your business deserves a <em>website that works.</em></div>
-                <div class="mini-sub">Professional, mobile-ready websites for small businesses without the agency price tag.</div>
-                <div class="mini-btns">
-                  <div class="mini-btn f">Get a Quote</div>
-                  <div class="mini-btn">See Work</div>
-                </div>
-              </div>
-              <div class="mini-screen-visual">
-                <div class="mini-card">
-                  <div class="mini-card-title">GreenCut Lawn Care</div>
-                  <div class="mini-card-line"></div>
-                  <div class="mini-card-line short"></div>
-                  <div class="mini-card-line gold"></div>
-                </div>
-                <div class="mini-card">
-                  <div class="mini-card-title">Prestige Barbershop</div>
-                  <div class="mini-card-line"></div>
-                  <div class="mini-card-line short"></div>
-                  <div class="mini-card-line gold"></div>
-                </div>
-              </div>
-            </div>
-            <div class="mini-services">
-              <div class="mini-svc"><div class="mini-svc-icon">🖥</div><div class="mini-svc-label">Web Design</div></div>
-              <div class="mini-svc"><div class="mini-svc-icon">📍</div><div class="mini-svc-label">Local SEO</div></div>
-              <div class="mini-svc"><div class="mini-svc-icon">🛠</div><div class="mini-svc-label">Care Plans</div></div>
-              <div class="mini-svc"><div class="mini-svc-icon">⭐</div><div class="mini-svc-label">Google Biz</div></div>
-            </div>
-          </div> -->
-        </div>
-      <!--  <div class="laptop-base"></div>-->
+        <img src="Images/laptop.png">
         <div class="laptop-foot"></div>
       </div>
     </div>
@@ -381,119 +150,44 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <section id="services">
   <div class="gold-line reveal d1"></div>
   <h2 class="section-title reveal d2">What We Build</h2>
-  <p class="section-sub reveal d3">Clean, fast, and professional — every site we deliver is built to convert visitors into customers.</p>
+  <p class="section-sub reveal d3">We build clean, fast, and professional sites. Every site we deliver is built to convert visitors into customers.</p>
   <div class="services-grid">
     <div class="service-card reveal d1"><div class="service-num">01</div><h3>Website Design</h3><p>Custom-designed, mobile-responsive sites that look great on every screen and load fast — built from scratch for your business.</p></div>
     <div class="service-card reveal d2"><div class="service-num">02</div><h3>Local SEO Setup</h3><p>Proper SEO titles, meta descriptions, and Google Maps integration so your business shows up when people search locally.</p></div>
-    <div class="service-card reveal d3"><div class="service-num">03</div><h3>Monthly Care Plans</h3><p>Hosting, backups, updates, and small edits handled for you — so your site stays fresh and you stay focused on your business.</p></div>
+    <div class="service-card reveal d3"><div class="service-num">03</div><h3>Monthly Care Plans</h3><p>Hosting, backups, updates, and small edits handled for you so your site stays fresh and you stay focused on your business.</p></div>
     <div class="service-card reveal d4"><div class="service-num">04</div><h3>Google Business Profile</h3><p>We set up or optimize your Google Business Profile so you appear in local map results and build credibility with reviews.</p></div>
   </div>
 </section>
 
-
-<section id="process">
+<section id="explore">
   <div class="gold-line reveal d1"></div>
-  <h2 class="section-title reveal d2">How It Works</h2>
-  <p class="section-sub reveal d3">From first conversation to launch day — here's exactly what to expect when you work with YourWebBuild.</p>
-  <div class="process-grid">
-    <div class="process-step reveal d1">
-      <div class="process-num">01</div>
-      <h3>Free Consultation</h3>
-      <p>We start with a focused consultation to learn about your business, goals, and vision. </p>
-    </div>
-    <div class="process-step reveal d2">
-      <div class="process-num">02</div>
-      <h3>Proposal & Agreement</h3>
-      <p>You receive a clear project proposal with pricing and timeline. Once approved, we sign an agreement and collect your deposit to lock in your start date.</p>
-    </div>
-    <div class="process-step reveal d3">
-      <div class="process-num">03</div>
-      <h3>Content Collection</h3>
-      <p>We send you a simple checklist — logo, photos, business info, and copy. Timeline begins once your materials are received.</p>
-    </div>
-    <div class="process-step reveal d4">
-      <div class="process-num">04</div>
-      <h3>Design & Build</h3>
-      <p>We get to work. Your first draft is typically ready within 5–7 business days. You'll get a preview link to review before anything goes live.</p>
-    </div>
-    <div class="process-step reveal d5">
-      <div class="process-num">05</div>
-      <h3>Revisions</h3>
-      <p>You share feedback and we refine until it's right. Included revisions are outlined in your proposal — no surprise charges.</p>
-    </div>
-    <div class="process-step reveal d1">
-      <div class="process-num">06</div>
-      <h3>Launch</h3>
-      <p>Final payment clears, we connect your domain, and your site goes live. We walk you through everything so you feel confident owning it.</p>
-    </div>
-  </div>
-</section>
-
-
-<section id="portfolio">
-  <div class="gold-line reveal d1"></div>
-  <h2 class="section-title reveal d2">Recent Work</h2>
-  <p class="section-sub reveal d3">A look at some of the businesses we've helped get online and look professional.</p>
-  <div class="portfolio-grid">
-    <a href="https://darthomale88.github.io/Clean-house-site-demo/"><div class="port-card reveal d1"><div class="port-img p1"><div class="port-label"><span>Clean House</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Exterior Cleaning</p></div></div><div class="port-info"><h4>Clean House Power Washing</h4><p>1-page site with contact form, service list, and portfolio</p><p class="port-outcome">Built to turn local searches into booked jobs.</p><span class="port-tag">Starter Site</span></div></div></a>
-    <div class="port-card reveal d2"><div class="port-img p2"><div class="port-label"><span>Prestige</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Barbershop</p></div></div><div class="port-info"><h4>Prestige Cuts Barbershop</h4><p>3-page site with gallery, testimonials, and booking CTA</p><p class="port-outcome">Designed to keep the chairs full with easy online booking.</p><span class="port-tag">Business Site</span></div></div>
-    <div class="port-card reveal d3"><div class="port-img p3"><div class="port-label"><span>Mara</span><p style="font-size:.75rem;color:#8a97b0;letter-spacing:.1em;text-transform:uppercase;">Photography</p></div></div><div class="port-info"><h4>Mara Leigh Photography</h4><p>5-page portfolio with full gallery, pricing, and contact</p><p class="port-outcome">Made to showcase her work and book more sessions.</p><span class="port-tag">Premium Site</span></div></div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="gold-line reveal d1"></div>
-  <h2 class="section-title reveal d2">Simple, Honest Pricing</h2>
-  <p class="reveal d3" style="color:var(--gold);font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem;">✦ Year-End Sale · New-Client Pricing Through Dec 31</p>
-  <p class="section-sub reveal d3">No surprises. Pick the package that fits — or reach out and we'll find the right fit together.</p>
-  <div class="pricing-grid">
-    <div class="price-card reveal d1"><div class="price-name">Starter</div><div class="price-amount">$500</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$750</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">1-page website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Google Map embed</li><li>Basic SEO setup</li><li>1 round of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
-    <div class="price-card featured reveal d2"><div class="featured-badge">Most Popular</div><div class="price-name">Business</div><div class="price-amount">$800</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$1,500</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">3-page website</li><li>Home, About, Services, Contact</li><li>Gallery &amp; testimonials</li><li>Basic SEO setup</li><li>2 rounds of revisions</li></ul><a href="#contact" class="btn btn-fill" style="width:100%;text-align:center;display:block;">Get Started</a></div>
-    <div class="price-card reveal d3"><div class="price-name">Premium</div><div class="price-amount">$1,000</div><div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$3,500</span> &nbsp;Year-end sale price</div><ul class="price-features"><li class="hl">5-page website</li><li>Copywriting assistance</li><li>Gallery &amp; testimonials</li><li>Google Business Profile help</li><li>3 rounds of revisions</li></ul><a href="#contact" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a></div>
-	
-	
-	
-  </div>
- 
-  
-  <div class="care-banner reveal d3">
-
-  <div class="care-left">
-    <h2 class="section-title reveal d2">We Don't Just Build Sites</h2>
-    <p class= "reveal d3" style="color:var(--muted);font-size:.95rem;margin-bottom:1rem;">We keep them alive, updated, and growing so you can focus on running your business.</p>
-    <div class= "reveal d4"style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;">Monthly Care Plans</div>
-    <div class= "reveal d4" style="color:var(--muted);font-size:.9rem;">Keep your site running — from $29/mo hosting &amp; backups up to $149/mo with priority edits.</div>
-    <div class= "reveal d4" style="color:var(--white);font-size:.9rem;margin-top:.75rem;">Most clients recoup the cost in one prevented website outage.</div>
-    <div class= "reveal d5" style="color:var(--gold);font-size:.85rem;margin-top:.5rem;">No long-term contracts. No disappearing after launch.</div>
-  </div>
-
-  <div class="care-right" style="display:flex;align-items:center;">
-    <a href="care-plans.html" class="btn">Learn More</a>
-  </div>
-
- </div>
-  
-  
-</section>
-
-<section id="about">
-  <div class="about-inner">
-    <div class="about-text">
-      <div class="gold-line reveal d1"></div>
-      <h2 class="section-title reveal d2">Built for the Small Business Owner</h2>
-      <p class="reveal d3">At <strong>YourWebBuild</strong>, we believe every local business deserves a professional online presence — not just the ones who can afford big agencies. We work with handymen, barbers, cleaners, photographers, artists, and churches.</p>
-      <p class="reveal d4">Our promise: <strong>clean design, mobile-friendly, fast delivery, honest pricing.</strong> No tech jargon. Just a site that works for you.</p>
-      <div class="about-stats">
-        <div class="stat reveal d1"><div class="stat-num">7 days</div><div class="stat-label">Average first draft</div></div>
-        <div class="stat reveal d2"><div class="stat-num">100%</div><div class="stat-label">Mobile responsive</div></div>
-        <div class="stat reveal d3"><div class="stat-num">$0</div><div class="stat-label">Hidden fees</div></div>
-        <div class="stat reveal d4"><div class="stat-num">Local</div><div class="stat-label">Indy-based &amp; trusted</div></div>
-      </div>
-    </div>
-    <!--<div class="about-visual reveal-right"> </div>-->
-      <div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div>
-      <div class="about-monogram reveal-right"><img src="Images/portrait.png"></div>
-    
+  <h2 class="section-title reveal d2">Take a Closer Look</h2>
+  <p class="section-sub reveal d3">Everything you'd want to know before reaching out.</p>
+  <div class="explore-grid">
+    <a class="explore-card reveal d1" href="process.html">
+      <span class="explore-mark">✦</span>
+      <h3>Our Process</h3>
+      <p>From first conversation to launch day, here's exactly what to expect when you work with us.</p>
+      <span class="explore-link">See the process →</span>
+    </a>
+    <a class="explore-card reveal d2" href="portfolio.html">
+      <span class="explore-mark">✦</span>
+      <h3>Recent Work</h3>
+      <p>A look at some of the businesses we've helped get online and look professional.</p>
+      <span class="explore-link">View the portfolio →</span>
+    </a>
+    <a class="explore-card reveal d3" href="pricing.html">
+      <span class="explore-mark">✦</span>
+      <h3>Pricing &amp; Care Plans</h3>
+      <p>One-time builds starting at $500, plus monthly care plans from $49/mo to keep your site running.</p>
+      <span class="explore-link">See pricing →</span>
+    </a>
+    <a class="explore-card reveal d4" href="about.html">
+      <span class="explore-mark">✦</span>
+      <h3>About Us</h3>
+      <p>We believe every local business deserves a professional online presence; not just the ones who can afford big agencies.</p>
+      <span class="explore-link">Meet the builder →</span>
+    </a>
   </div>
 </section>
 
@@ -506,251 +200,30 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="testi-card reveal d2"><p class="testi-quote">"Fast, professional, and they actually listened. My clients love the new site and bookings have gone up."</p><div class="testi-author"><div class="testi-avatar">TJ</div><div><div class="testi-name">Tanya J.</div><div class="testi-biz">Prestige Cuts Barbershop</div></div></div></div>
     <div class="testi-card reveal d3"><p class="testi-quote">"They handle all the updates. It's one less thing to worry about — and the site looks incredible."</p><div class="testi-author"><div class="testi-avatar">DK</div><div><div class="testi-name">David K.</div><div class="testi-biz">Handyman Services</div></div></div></div>
   </div>
-
-  <!--<div class="review-cta reveal d1">
-    <div class="review-stars" aria-hidden="true">★★★★★</div>
-    <h3>Worked with us? We'd love your review.</h3>
-    <p>A quick Google review helps other Indianapolis business owners find us — and it means the world to a growing local business. Thank you!</p>
-    <!-- ▼ REPLACE the link below with your Google review link.
-         Get it from your Google Business Profile → "Ask for reviews" → copy link.
-         It will look like: https://g.page/r/XXXXXXXXXXXX/review --><!--
-    <a href="https://g.page/r/YOUR-REVIEW-LINK/review" class="btn btn-fill" target="_blank" rel="noopener">Leave a Google Review</a>
-  </div>
-</section>-->
-
-
-
-
-
-<!-- ============================================================
-     YOURWEBBUILD: CONTACT SECTION (Phase 1, Free Consultation)
-     Drop-in replacement for your existing <section id="contact">.
-
-     Matches your theme: navy/gold, Cormorant Garamond + DM Sans,
-     your .contact-form / .form-group classes, your reveal animations,
-     and your existing Formspree action + honeypot.
-
-     TWO THINGS TO PASTE:
-       1. The <style> block below: drop it into your main stylesheet
-          (or leave it here, it is scoped to the budget slider only).
-       2. The <section id="contact"> below: replace your current one.
-
-     Also update Process step 01 and keep the Phase 2 copy on ice
-     (both provided in chat).
-     ============================================================ -->
-
-
-<!-- ======================================================================
-     PHASE 2 COPY, COMMENTED OUT.
-     When you hit roughly 8 to 10 solid Google reviews, switch to paid:
-       1. Process step 01: use the heading/body below.
-       2. Contact intro: swap the .contact-info paragraph for the version below.
-       3. Submit button: change to "Request My Strategy Session".
-       4. Set your real price (suggested $99 to $149).
-
-     Process step 01 (Phase 2):
-     Heading:  Website Strategy Session: $149
-     Body:     We start with a paid Website Strategy Session: a focused
-               deep dive where we map your site's pages, structure, and
-               strategy. You walk away with a clear written plan you can
-               keep, whether or not we build it together. The fee is
-               credited toward your project if you move forward.
-
-     Contact intro (Phase 2):
-     Fill out the form and we will reach out within 24 hours to book your
-     Website Strategy Session. You walk away with a clear plan for your site,
-     and if you move forward, the fee is credited toward your project.
-====================================================================== -->
-
-
-<style>
-/* Budget slider, themed to match YourWebBuild */
-.budget-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:.2rem 0 .9rem;}
-.budget-value{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1;}
-.budget-floor-note{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
-.budget-slider{-webkit-appearance:none;appearance:none;width:100%;height:3px;padding:0;border:none;background:var(--border);border-radius:999px;cursor:pointer;}
-.budget-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--navy3);box-shadow:0 2px 12px rgba(201,168,76,.45);cursor:pointer;transition:transform .15s;}
-.budget-slider::-webkit-slider-thumb:hover{transform:scale(1.08);}
-.budget-slider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--navy3);box-shadow:0 2px 12px rgba(201,168,76,.45);cursor:pointer;}
-.budget-slider:focus-visible{outline:none;}
-.budget-slider:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px rgba(201,168,76,.28);}
-.budget-scale{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:.6rem;}
-</style>
-
-
-<section id="contact">
-  <div class="contact-inner">
-    <div class="contact-info reveal-left">
-      <div class="gold-line reveal d1"></div>
-      <h2 class="section-title reveal d2">Let's Build Something</h2>
-
-      <!-- PHASE 1 intro (active). Swap for the Phase 2 version when you go paid. -->
-      <p class="reveal d3">Fill out the form and we will reach out within 24 hours to schedule your free consultation. No cost, no obligation, just a conversation about what your business needs.</p>
-
-      <div class="contact-detail reveal d4"><span class="icon">✦</span> Indianapolis, Indiana</div>
-      <div class="contact-detail reveal d5"><span class="icon">✦</span> hello@yourwebbuild.com</div>
-      <div class="contact-detail reveal d5"><span class="icon">✦</span> (317) 731-2108</div>
-    </div>
-
-    <div class="contact-form reveal-right">
-      <form action="https://formspree.io/f/mlgvyvbv" method="POST">
-
-        <input type="hidden" name="_subject" value="New Website Lead - YourWebBuild">
-
-        <!-- Honeypot Spam Protection -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" placeholder="John Smith" required />
-        </div>
-
-        <div class="form-group">
-          <label>Business Name</label>
-          <input type="text" name="business" placeholder="Smith's Lawn Care" required />
-        </div>
-
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" placeholder="you@yourbusiness.com" required />
-        </div>
-
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(317) 555-0123" required />
-        </div>
-
-        <div class="form-group">
-          <label>What Type of Business Are You?</label>
-          <input type="text" name="industry" placeholder="e.g. Barbershop, Cleaning service, Church, Contractor" required />
-        </div>
-
-        <div class="form-group">
-          <label>What Kind of Site Do You Need?</label>
-          <select name="sitetype" required>
-            <option value="">Select an option...</option>
-            <option>1-page site (single service or landing page)</option>
-            <option>3-page site (Home, About, Services, Contact)</option>
-            <option>5+ page site (gallery, church, portfolio)</option>
-            <option>Not sure, help me decide</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Your Budget</label>
-          <div class="budget-head">
-            <span class="budget-value" id="budgetValue" aria-live="polite">$800</span>
-            <span class="budget-floor-note">Projects start at $500</span>
-          </div>
-          <input type="range" id="budget" class="budget-slider"
-                 min="500" max="3500" step="250" value="800"
-                 aria-label="Project budget in dollars" />
-          <input type="hidden" name="budget" id="budgetHidden" value="$800" />
-          <div class="budget-scale"><span>$500</span><span>$3,500+</span></div>
-        </div>
-
-        <div class="form-group">
-          <label>When Are You Hoping to Launch?</label>
-          <select name="timeline" required>
-            <option value="">Select an option...</option>
-            <option>ASAP, ready to start now</option>
-            <option>Within 1 to 3 months</option>
-            <option>Just exploring for now</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Tell Us About Your Project</label>
-          <textarea name="message"
-            placeholder="e.g. I run a small barbershop and need online booking and a gallery of my work. I have a logo but no photos yet."
-            required></textarea>
-        </div>
-
-        <!-- PHASE 2: change to "Request My Strategy Session ✦" when you go paid -->
-        <button type="submit" class="btn btn-fill" style="width:100%;border:none;cursor:pointer;font-size:.9rem;">
-          Send My Request ✦
-        </button>
-
-      </form>
-    </div>
-  </div>
 </section>
 
-
-<script>
-/* Live budget value. Only the formatted hidden field submits, so your
-   lead email reads "$1,500" instead of a raw number. */
-(function(){
-  var slider = document.getElementById('budget');
-  var out    = document.getElementById('budgetValue');
-  var hidden = document.getElementById('budgetHidden');
-  if(!slider) return;
-  function fmt(n){
-    var label = '$' + Number(n).toLocaleString('en-US');
-    if(Number(n) >= Number(slider.max)) label += '+';
-    return label;
-  }
-  function update(){
-    var t = fmt(slider.value);
-    out.textContent = t;
-    if(hidden) hidden.value = t;
-  }
-  slider.addEventListener('input', update);
-  update();
-})();
-</script>
-
-
-
-
-
+<div class="cta-band reveal">
+  <div class="cta-band-text">
+    <h3>Ready to get started?</h3>
+    <p>Tell us about your business and we'll get back to you within 24 hours with a free quote.</p>
+  </div>
+  <a href="contact.html" class="btn btn-fill">Get a Free Quote</a>
+</div>
 
 <footer>
   <div class="footer-logo">YourWebBuild</div>
   <div class="footer-links">
-    <a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#portfolio">Work</a><a href="#contact">Contact</a><a href="https://billing.stripe.com/p/login/YOUR_LINK_HERE">Manage My Plan</a>
-  </div> 
+    <a href="index.html#services">Services</a>
+    <a href="process.html">Process</a>
+    <a href="portfolio.html">Work</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://billing.stripe.com/p/login/test_aFa7sK5XEgO0h2pbyrfMA00">Manage My Plan</a>
+  </div>
   <div class="footer-copy">© 2026 YourWebBuild. Indianapolis, IN.</div>
 </footer>
 
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.12});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.gold-line,.about-visual').forEach(el => observer.observe(el));
-
-window.addEventListener('scroll', () => {
-  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 60);
-});
-
-function smoothScrollTo(target, duration){
-  const start = window.scrollY;
-  const end = target.getBoundingClientRect().top + window.scrollY - 75;
-  const dist = end - start;
-  let startTime = null;
-  function ease(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t; }
-  function step(ts){
-    if(!startTime) startTime = ts;
-    const elapsed = ts - startTime;
-    const progress = Math.min(elapsed/duration, 1);
-    window.scrollTo(0, start + dist * ease(progress));
-    if(progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e){
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target){ e.preventDefault(); smoothScrollTo(target, 800); }
-  });
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
