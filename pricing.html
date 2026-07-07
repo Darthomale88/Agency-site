@@ -56,6 +56,13 @@
 .plan-card.featured .plan-cta{background:var(--gold);color:var(--navy);}
 .plan-card.featured .plan-cta:hover{background:var(--gold2);border-color:var(--gold2);}
 
+/* Locked plans (not yet open — waitlist only) */
+.plan-card.locked{border-style:dashed;border-color:rgba(201,168,76,.4);background:var(--navy2);}
+.plan-card.locked:hover{border-color:rgba(201,168,76,.6);}
+.coming-soon-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--navy2);border:1px solid var(--gold);color:var(--gold);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.28rem 1.1rem;white-space:nowrap;border-radius:0 0 2px 2px;}
+.plan-cta-locked{background:transparent;border:1px dashed var(--gold);color:var(--gold);cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;}
+.plan-cta-locked:hover{background:rgba(201,168,76,.1);color:var(--gold);}
+
 /* Comparison table */
 .compare-section{padding:0 5% 5rem;}
 .compare-inner{max-width:860px;margin:0 auto;}
@@ -116,6 +123,41 @@
 .twb-portal-btn:hover{background:var(--gold2);transform:translateY(-1px);}
 @media(prefers-reduced-motion:reduce){.twb-modal-overlay,.twb-card,.twb-check path{animation:none!important;opacity:1!important;stroke-dashoffset:0!important;}}
 @media(max-width:480px){.twb-card{padding:34px 22px 26px;}.twb-card h2{font-size:1.6rem;}}
+
+/* Waitlist modal (Standard / Premium — reuses the thank-you modal's visual language) */
+.wl-modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,15,28,.78);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px;z-index:9999;animation:twb-fade .25s ease-out;}
+.wl-modal-overlay.wl-open{display:flex;}
+.wl-card{max-width:440px;width:100%;max-height:90vh;overflow-y:auto;background:var(--navy3);border:1px solid var(--border);border-radius:4px;padding:36px 32px 32px;position:relative;text-align:center;animation:twb-rise .35s ease-out both;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.wl-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:none;background:transparent;color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:color .15s ease,background .15s ease;}
+.wl-close:hover{color:var(--gold);background:rgba(255,255,255,.05);}
+.wl-eyebrow{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
+.wl-card h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;color:var(--white);margin-bottom:10px;}
+.wl-lede{font-size:.88rem;line-height:1.55;color:var(--muted);margin-bottom:22px;}
+.wl-divider{width:44px;height:1px;background:var(--gold);opacity:.5;margin:0 auto 22px;}
+.wl-card form{text-align:left;}
+.wl-card label{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;}
+.wl-card input[type="text"],
+.wl-card input[type="email"],
+.wl-card textarea{
+  width:100%;
+  background:var(--navy2);
+  border:1px solid var(--border);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  font-size:.9rem;
+  padding:.7rem .8rem;
+  margin-bottom:1.1rem;
+  border-radius:2px;
+}
+.wl-card input:focus,
+.wl-card textarea:focus{outline:none;border-color:var(--gold);}
+.wl-card textarea{resize:vertical;min-height:64px;}
+.wl-submit{width:100%;padding:.85rem;background:var(--gold);color:var(--navy);border:none;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease;}
+.wl-submit:hover{background:var(--gold2);}
+.wl-confirm{display:none;}
+.wl-confirm.wl-confirm-open{display:block;}
+.wl-error{display:none;color:#e08a7d;font-size:.82rem;margin-top:-4px;margin-bottom:12px;}
+.wl-error.wl-error-open{display:block;}
 </style>
 </head>
 <body>
@@ -215,7 +257,9 @@
       <a href="https://buy.stripe.com/aFa7sK5XEgO0h2pbyrfMA00" class="plan-cta">Get Started</a>
     </div>           
 
-    <div class="plan-card featured reveal d2">
+    <!-- STANDARD — locked until SEO tooling confidence is built. Waitlist only. -->
+    <div class="plan-card locked reveal d2" data-tier="Standard" data-price="$149/mo">
+      <span class="coming-soon-badge">Coming Soon</span>
       <div class="plan-tier">Standard</div>
       <div class="plan-price"><sup>$</sup>149<span>/mo</span></div>
       <p class="plan-desc">Everything in Basic, plus up to 1 hour of edits per month, text, photos, hours, whatever you need. Ongoing SEO updates keep you competitive.</p>
@@ -226,10 +270,12 @@
         <li><span class="check">✦</span> Content updates (text, images)</li>
         <li><span class="check">✦</span> Monthly check-in</li>
       </ul>
-      <a href="https://buy.stripe.com/00w14m4TAfJWh2pfOHfMA01" class="plan-cta">Get Started</a>
+      <button type="button" class="plan-cta plan-cta-locked wl-trigger">Join the Waitlist</button>
     </div>
 
-    <div class="plan-card reveal d3">
+    <!-- PREMIUM — locked until SEO tooling confidence is built. Waitlist only. -->
+    <div class="plan-card locked reveal d3" data-tier="Premium" data-price="$299/mo">
+      <span class="coming-soon-badge">Coming Soon</span>
       <div class="plan-tier">Premium</div>
       <div class="plan-price"><sup>$</sup>299<span>/mo</span></div>
       <p class="plan-desc">Full care with up to 2 hours of edits per month, priority turnaround on all requests, and ongoing SEO updates for a competitive edge.</p>
@@ -241,7 +287,7 @@
         <li><span class="check">✦</span> Content &amp; layout changes</li>
         <li><span class="check">✦</span> Priority response time</li>
       </ul>
-      <a href="https://buy.stripe.com/cNi00i3PwfJW6nL9qjfMA02" class="plan-cta">Get Started</a>
+      <button type="button" class="plan-cta plan-cta-locked wl-trigger">Join the Waitlist</button>
     </div>
 
   </div>
@@ -357,6 +403,48 @@
   </div>
 </div>
 
+<!-- Waitlist modal, opens when Standard or Premium's "Join the Waitlist" button is clicked -->
+<div class="wl-modal-overlay" id="wlOverlay" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
+  <div class="wl-card">
+    <button class="wl-close" id="wlClose" aria-label="Close">&times;</button>
+
+    <div id="wlFormView">
+      <div class="wl-eyebrow">Coming Soon</div>
+      <h2 id="wlTitle">Join the Waitlist</h2>
+      <p class="wl-lede" id="wlLede">This plan isn't open yet — I'm building out SEO tooling confidence before offering it. Leave your info and I'll reach out personally the moment it's ready.</p>
+      <div class="wl-divider"></div>
+
+      <!-- Netlify Forms: same pattern as the site's existing contact form -->
+      <form name="tier-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="wlForm">
+        <input type="hidden" name="form-name" value="tier-waitlist" />
+        <input type="hidden" name="tier" id="wlTierField" value="" />
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <label for="wlName">Name</label>
+        <input type="text" name="name" id="wlName" required>
+
+        <label for="wlEmail">Email</label>
+        <input type="email" name="email" id="wlEmail" required>
+
+        <label for="wlNote">What are you hoping this plan helps with? (optional)</label>
+        <textarea name="note" id="wlNote" rows="3" placeholder="e.g. showing up higher on Google for local searches"></textarea>
+
+        <div class="wl-error" id="wlError">Something went wrong submitting the form. Please try again.</div>
+        <button type="submit" class="wl-submit">Join Waitlist</button>
+      </form>
+    </div>
+
+    <div class="wl-confirm" id="wlConfirm">
+      <svg class="twb-check" viewBox="0 0 56 56" aria-hidden="true">
+        <circle cx="28" cy="28" r="26"></circle>
+        <path d="M17 29 L25 37 L40 20"></path>
+      </svg>
+      <h2>You're on the list</h2>
+      <p class="wl-lede">I'll reach out personally once this plan is ready to launch.</p>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 <script>
 // Thank-you modal logic
@@ -386,6 +474,79 @@
 
   const params = new URLSearchParams(window.location.search);
   if (params.get('success') === 'true') openModal(params.get('plan'));
+})();
+
+// Waitlist modal logic (Standard / Premium)
+(function () {
+  const overlay = document.getElementById('wlOverlay');
+  const closeBtn = document.getElementById('wlClose');
+  const title = document.getElementById('wlTitle');
+  const lede = document.getElementById('wlLede');
+  const tierField = document.getElementById('wlTierField');
+  const formView = document.getElementById('wlFormView');
+  const confirmView = document.getElementById('wlConfirm');
+  const form = document.getElementById('wlForm');
+  const errorBox = document.getElementById('wlError');
+
+  function openWaitlist(tier, price) {
+    tierField.value = tier;
+    title.textContent = 'Join the ' + tier + ' Waitlist';
+    lede.textContent = tier + ' (' + price + ") isn't open yet — I'm building out SEO tooling confidence before offering it. Leave your info and I'll reach out personally the moment it's ready.";
+    formView.style.display = 'block';
+    confirmView.classList.remove('wl-confirm-open');
+    errorBox.classList.remove('wl-error-open');
+    overlay.classList.add('wl-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeWaitlist() {
+    overlay.classList.remove('wl-open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.wl-trigger').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const card = btn.closest('.plan-card');
+      openWaitlist(card.dataset.tier, card.dataset.price);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeWaitlist);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeWaitlist(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('wl-open')) closeWaitlist(); });
+
+  function encodeFormData(data) {
+    return Object.keys(data).map(function (key) {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+    }).join('&');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorBox.classList.remove('wl-error-open');
+
+    const payload = {
+      'form-name': 'tier-waitlist',
+      tier: tierField.value,
+      name: document.getElementById('wlName').value,
+      email: document.getElementById('wlEmail').value,
+      note: document.getElementById('wlNote').value
+    };
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(payload)
+    })
+      .then(function () {
+        formView.style.display = 'none';
+        confirmView.classList.add('wl-confirm-open');
+        form.reset();
+      })
+      .catch(function () {
+        errorBox.classList.add('wl-error-open');
+      });
+  });
 })();
 
 // FAQ accordion
