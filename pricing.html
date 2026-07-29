@@ -63,6 +63,19 @@
 .plan-cta-locked{background:transparent;border:1px dashed var(--gold);color:var(--gold);cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;}
 .plan-cta-locked:hover{background:rgba(201,168,76,.1);color:var(--gold);}
 
+/* Bundle & Save */
+.bundle-section{padding:0 5% 6rem;}
+.bundle-inner{max-width:1100px;margin:0 auto;}
+.bundle-header{text-align:center;margin-bottom:2.5rem;}
+.bundle-header p{color:var(--muted);font-size:.95rem;max-width:560px;margin:.75rem auto 0;line-height:1.6;}
+.bundle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+.bundle-card{border:1px solid var(--border);background:var(--navy3);padding:1.75rem 1.75rem 2rem;text-align:center;}
+.bundle-card .bundle-tier{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;}
+.bundle-card .bundle-was{font-size:.85rem;color:var(--muted);text-decoration:line-through;opacity:.6;}
+.bundle-card .bundle-now{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:var(--gold);line-height:1.2;margin:.25rem 0 .5rem;}
+.bundle-card .bundle-cond{font-size:.85rem;color:var(--muted);line-height:1.5;}
+.bundle-card .bundle-cond strong{color:var(--white);font-weight:500;}
+
 /* Comparison table */
 .compare-section{padding:0 5% 5rem;}
 .compare-inner{max-width:860px;margin:0 auto;}
@@ -191,47 +204,46 @@
 <section id="build-pricing">
   <div class="gold-line reveal d1"></div>
   <h2 class="section-title reveal d2">One-Time Website Builds</h2>
-  <p class="reveal d3" style="color:var(--gold);font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem;">✦ Year-End Sale · New-Client Pricing Through Dec 31</p>
-  <p class="section-sub reveal d3">Choose the page count that fits your business — or talk it through with us first.</p>
+  <p class="section-sub reveal d3">Choose the page count that fits your business — or talk it through with us first. Every build below can be bundled with a Care Plan to lower your upfront cost.</p>
   <div class="pricing-grid">
     <div class="price-card reveal d1">
       <div class="price-name">Starter</div>
       <div class="price-amount">$500</div>
-      <div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$750</span>&nbsp;Year-end sale price</div>
+      <div class="price-range">1-page website</div>
       <ul class="price-features">
-        <li class="hl">1-page website</li>
-        <li>Mobile-friendly design</li>
+        <li class="hl">Custom design</li>
+        <li>Mobile responsive</li>
         <li>Contact form</li>
-        <li>Google Map embed</li>
-        <li>Basic SEO setup</li>
-        <li>1 round of revisions</li>
+        <li>Basic on-page SEO</li>
+        <li>SSL, Analytics &amp; Search Console</li>
+        <li>30 days of support</li>
       </ul>
       <a href="contact.html" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a>
     </div>
     <div class="price-card featured reveal d2">
       <div class="featured-badge">Most Popular</div>
-      <div class="price-name">Business</div>
-      <div class="price-amount">$800</div>
-      <div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$1,500</span>&nbsp;Year-end sale price</div>
+      <div class="price-name">Growth</div>
+      <div class="price-amount">$1,595</div>
+      <div class="price-range">3-page website</div>
       <ul class="price-features">
-        <li class="hl">3-page website</li>
-        <li>Home, About, Services, Contact</li>
+        <li class="hl">Home, About, Services, Contact</li>
         <li>Gallery &amp; testimonials</li>
-        <li>Basic SEO setup</li>
-        <li>2 rounds of revisions</li>
+        <li>Basic on-page SEO</li>
+        <li>SSL, Analytics &amp; Search Console</li>
+        <li>30 days of support</li>
       </ul>
       <a href="contact.html" class="btn btn-fill" style="width:100%;text-align:center;display:block;">Get Started</a>
     </div>
     <div class="price-card reveal d3">
-      <div class="price-name">Premium</div>
-      <div class="price-amount">$1,000</div>
-      <div class="price-range"><span style="text-decoration:line-through;opacity:.55;">$3,500</span>&nbsp;Year-end sale price</div>
+      <div class="price-name">Professional</div>
+      <div class="price-amount">$2,495</div>
+      <div class="price-range">5-page website</div>
       <ul class="price-features">
-        <li class="hl">5-page website</li>
-        <li>Copywriting assistance</li>
+        <li class="hl">Copywriting assistance</li>
         <li>Gallery &amp; testimonials</li>
-        <li>Google Business Profile help</li>
-        <li>3 rounds of revisions</li>
+        <li>Basic on-page SEO</li>
+        <li>SSL, Analytics &amp; Search Console</li>
+        <li>30 days of support</li>
       </ul>
       <a href="contact.html" class="btn" style="width:100%;text-align:center;display:block;">Get Started</a>
     </div>
@@ -246,50 +258,87 @@
   <div class="plans-grid">
 
     <div class="plan-card reveal d1">
-      <div class="plan-tier">Basic</div>
+      <div class="plan-tier">Essentials</div>
       <div class="plan-price"><sup>$</sup>49<span>/mo</span></div>
       <p class="plan-desc">The essentials for peace of mind. Your site stays live, secure, and backed up automatically, no action required from you.</p>
       <ul class="plan-features">
-        <li class="bold-feat"><span class="check">✦</span> Hosting</li>
-        <li><span class="check">✦</span> Site monitoring</li>
-        <li><span class="check">✦</span> Regular backups</li>
+        <li class="bold-feat"><span class="check">✦</span> Hosting, security &amp; backups</li>
+        <li><span class="check">✦</span> Uptime monitoring</li>
+        <li><span class="check">✦</span> Minor edits</li>
+        <li><span class="check">✦</span> Plugin/library updates</li>
+        <li><span class="check">✦</span> Email support</li>
       </ul>
       <a href="https://buy.stripe.com/aFa7sK5XEgO0h2pbyrfMA00" class="plan-cta">Get Started</a>
     </div>           
 
-    <!-- STANDARD — locked until SEO tooling confidence is built. Waitlist only. -->
-    <div class="plan-card locked reveal d2" data-tier="Standard" data-price="$149/mo">
+    <!-- GROWTH — locked until SEO tooling confidence is built. Waitlist only. -->
+    <div class="plan-card locked reveal d2" data-tier="Growth" data-price="$149/mo">
       <span class="coming-soon-badge">Coming Soon</span>
-      <div class="plan-tier">Standard</div>
+      <div class="plan-tier">Growth</div>
       <div class="plan-price"><sup>$</sup>149<span>/mo</span></div>
-      <p class="plan-desc">Everything in Basic, plus up to 1 hour of edits per month, text, photos, hours, whatever you need. Ongoing SEO updates keep you competitive.</p>
+      <p class="plan-desc">Everything in Essentials, plus up to 45 minutes of edits per month and ongoing SEO work to keep you competitive and growing.</p>
       <ul class="plan-features">
-        <li class="bold-feat"><span class="check">✦</span> Hosting</li>
-        <li><span class="check">✦</span> Regular backups</li>
-        <li class="bold-feat"><span class="check">✦</span> Up to 1 hour of edits/month</li>
-        <li><span class="check">✦</span> Content updates (text, images)</li>
-        <li><span class="check">✦</span> Monthly check-in</li>
+        <li><span class="check">✦</span> Everything in Essentials</li>
+        <li><span class="check">✦</span> Monthly SEO improvements</li>
+        <li><span class="check">✦</span> Content updates</li>
+        <li><span class="check">✦</span> Performance optimization</li>
+        <li><span class="check">✦</span> Analytics reports</li>
+        <li><span class="check">✦</span> Quarterly strategy review</li>
+        <li class="bold-feat"><span class="check">✦</span> Up to 45 min of edits/month</li>
       </ul>
       <button type="button" class="plan-cta plan-cta-locked wl-trigger">Join the Waitlist</button>
     </div>
 
-    <!-- PREMIUM — locked until SEO tooling confidence is built. Waitlist only. -->
-    <div class="plan-card locked reveal d3" data-tier="Premium" data-price="$299/mo">
+    <!-- COMPLETE — locked until SEO tooling confidence is built. Waitlist only. -->
+    <div class="plan-card locked featured reveal d3" data-tier="Complete" data-price="$299/mo">
       <span class="coming-soon-badge">Coming Soon</span>
-      <div class="plan-tier">Premium</div>
+      <div class="plan-tier">Complete</div>
       <div class="plan-price"><sup>$</sup>299<span>/mo</span></div>
-      <p class="plan-desc">Full care with up to 2 hours of edits per month, priority turnaround on all requests, and ongoing SEO updates for a competitive edge.</p>
+      <p class="plan-desc">Full care with everything in Growth, plus Google Business Profile management, review strategy, and local SEO built to win nearby searches.</p>
       <ul class="plan-features">
-        <li class="bold-feat"><span class="check">✦</span> Hosting</li>
-        <li><span class="check">✦</span> Regular backups</li>
+        <li><span class="check">✦</span> Everything in Growth</li>
+        <li class="bold-feat"><span class="check">✦</span> Google Business Profile setup &amp; optimization</li>
+        <li><span class="check">✦</span> Monthly GBP posts</li>
+        <li><span class="check">✦</span> Review strategy</li>
+        <li><span class="check">✦</span> Local SEO &amp; citation management</li>
+        <li><span class="check">✦</span> Competitor review</li>
         <li class="bold-feat"><span class="check">✦</span> Up to 2 hours of edits/month</li>
-        <li><span class="check">✦</span> Priority updates</li>
-        <li><span class="check">✦</span> Content &amp; layout changes</li>
-        <li><span class="check">✦</span> Priority response time</li>
+        <li><span class="check">✦</span> Priority support</li>
       </ul>
       <button type="button" class="plan-cta plan-cta-locked wl-trigger">Join the Waitlist</button>
     </div>
 
+  </div>
+</section>
+
+<!-- BUNDLE & SAVE -->
+<section class="bundle-section">
+  <div class="bundle-inner reveal">
+    <div class="bundle-header">
+      <div class="gold-line" style="margin:0 auto 1.5rem;"></div>
+      <h2 class="section-title" style="margin-bottom:0;">Bundle &amp; Save</h2>
+      <p>Commit to a Care Plan and reduce, or eliminate, your upfront build cost. The longer you stay, the more your site pays for itself.</p>
+    </div>
+    <div class="bundle-grid">
+      <div class="bundle-card">
+        <div class="bundle-tier">Starter Site</div>
+        <div class="bundle-was">$500</div>
+        <div class="bundle-now">FREE</div>
+        <div class="bundle-cond">with a <strong>12-month Growth Plan</strong> commitment ($149/mo)</div>
+      </div>
+      <div class="bundle-card">
+        <div class="bundle-tier">Growth Site</div>
+        <div class="bundle-was">$1,595</div>
+        <div class="bundle-now">$795</div>
+        <div class="bundle-cond">with a <strong>12-month Growth Plan</strong> commitment</div>
+      </div>
+      <div class="bundle-card">
+        <div class="bundle-tier">Professional Site</div>
+        <div class="bundle-was">$2,495</div>
+        <div class="bundle-now">$1,295</div>
+        <div class="bundle-cond">with a <strong>12-month Complete Care</strong> commitment</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -301,21 +350,23 @@
       <thead>
         <tr>
           <th></th>
-          <th>Basic<br><span style="color:var(--white);font-size:.9rem;">$49/mo</span></th>
-          <th class="featured-col">Standard<br><span style="color:var(--white);font-size:.9rem;">$149/mo</span></th>
-          <th>Premium<br><span style="color:var(--white);font-size:.9rem;">$299/mo</span></th>
+          <th>Essentials<br><span style="color:var(--white);font-size:.9rem;">$49/mo</span></th>
+          <th class="featured-col">Growth<br><span style="color:var(--white);font-size:.9rem;">$149/mo</span></th>
+          <th>Complete<br><span style="color:var(--white);font-size:.9rem;">$299/mo</span></th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Hosting</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>Site monitoring</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>Regular backups</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>SEO updates</td><td><span class="no">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>Monthly edits included</td><td><span class="no">—</span></td><td><span class="val">1 hour</span></td><td><span class="val">2 hours</span></td></tr>
-        <tr><td>Overage rate</td><td><span class="val">$75 / 30 min</span></td><td><span class="val">$80/hour</span></td><td><span class="val">$45/hour</span></td></tr>
+        <tr><td>Hosting, security &amp; backups</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Uptime monitoring</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Plugin/library updates</td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Monthly SEO improvements</td><td><span class="no">—</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Performance optimization</td><td><span class="no">—</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Analytics reports</td><td><span class="no">—</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Monthly edits included</td><td><span class="val">Minor edits</span></td><td><span class="val">45 min</span></td><td><span class="val">2 hours</span></td></tr>
         <tr><td>Content updates</td><td><span class="no">—</span></td><td><span class="yes">✦</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>Priority updates</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✦</span></td></tr>
-        <tr><td>Priority response time</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Google Business Profile setup &amp; optimization</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Local SEO &amp; citation management</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✦</span></td></tr>
+        <tr><td>Priority support</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✦</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -349,6 +400,11 @@
     <div class="faq-item">
       <div class="faq-q">What happens to my site if I cancel? <span class="arrow">›</span></div>
       <div class="faq-a">You own your site files. If you cancel, we'll hand everything over so you can host it yourself or move it to another provider.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do the bundle discounts work? <span class="arrow">›</span></div>
+      <div class="faq-a">Instead of discounting the build itself, we reward clients who commit to a Care Plan up front. Sign on for a 12-month Care Plan and your build cost drops, or on the Starter tier, is waived entirely. Ask us for details when you're ready to get started.</div>
     </div>
 
   </div>
@@ -403,7 +459,7 @@
   </div>
 </div>
 
-<!-- Waitlist modal, opens when Standard or Premium's "Join the Waitlist" button is clicked -->
+<!-- Waitlist modal, opens when Growth or Complete's "Join the Waitlist" button is clicked -->
 <div class="wl-modal-overlay" id="wlOverlay" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
   <div class="wl-card">
     <button class="wl-close" id="wlClose" aria-label="Close">&times;</button>
@@ -445,6 +501,12 @@
   </div>
 </div>
 
+<a href="tel:+13177312108" class="call-fab" aria-label="Call YourWebBuild">
+	  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+		<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+	  </svg>
+	</a>
+
 <script src="script.js"></script>
 <script>
 // Thank-you modal logic
@@ -476,7 +538,7 @@
   if (params.get('success') === 'true') openModal(params.get('plan'));
 })();
 
-// Waitlist modal logic (Standard / Premium)
+// Waitlist modal logic (Growth / Complete)
 (function () {
   const overlay = document.getElementById('wlOverlay');
   const closeBtn = document.getElementById('wlClose');
